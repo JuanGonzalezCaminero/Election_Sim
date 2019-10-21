@@ -1,2 +1,4 @@
-# pydsc-19-29-02
+# Planificación y Diseño de Sistemas Computacionales
+## Grado en Ingeniería Informática 
+
 
