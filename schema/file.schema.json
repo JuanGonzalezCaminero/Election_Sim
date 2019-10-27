@@ -30,7 +30,7 @@
             "items": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": ["name", "voters", "representatives", "blank", "null", "votes"],
+                "required": ["name", "voters", "representatives", "blank", "null", "candiatures"],
                 "properties": {
                     "name": {
                         "type": "string"
@@ -51,12 +51,12 @@
                         "type": "number",
                         "minimum": 0
                     },
-                    "votes" : {
+                    "candidatures" : {
                         "type": "array",
                         "items": {
                             "type": "object",
                             "additionalProperties": false,
-                            "required": ["name", "abbr", "num"],
+                            "required": ["name", "abbr", "votes"],
                             "properties": {
                                 "name": {
                                     "type": "string"
@@ -64,7 +64,7 @@
                                 "abbr": {
                                     "type": "string"
                                 },
-                                "num": {
+                                "votes": {
                                     "type": "number",
                                     "minimum": 0
                                 }
