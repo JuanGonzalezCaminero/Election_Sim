@@ -1,0 +1,78 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Import/Export election file",
+    "description": "File used to import/export all election data",
+    "type": "object",
+    "additionalProperties": false,
+    "required": ["date", "type", "configuration", "districts"],
+    "properties": {
+        "date": {
+            "type": "string",
+            "format": "date"
+        },
+        "type": {
+            "type": "string",
+            "enum": ["regional", "congress", "senate", "local"]
+        },
+        "configuration": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["threshold"],
+            "properties": {
+                "threshold": {
+                    "type": "number",
+                    "minimum": 0
+                }
+            }
+        },
+        "districts": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["name", "voters", "representatives", "blank", "null", "candiatures"],
+                "properties": {
+                    "name": {
+                        "type": "string"
+                    },
+                    "voters": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "representatives": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "blank": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "null": {
+                        "type": "number",
+                        "minimum": 0
+                    },
+                    "candidatures" : {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "required": ["name", "abbr", "votes"],
+                            "properties": {
+                                "name": {
+                                    "type": "string"
+                                },
+                                "abbr": {
+                                    "type": "string"
+                                },
+                                "votes": {
+                                    "type": "number",
+                                    "minimum": 0
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
