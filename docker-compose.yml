@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+
+ django:
+  build: .
+  restart: always
+  command: "uwsgi --socket :3031 --module democrazy.wsgi"
+  environment:
+   ENV: "PROD"
+  ports:
+   - "3031:3031"
+  volumes:
+   - ./:/app
+  
+ nginx:
+  image: nginx:1.17.2
+  restart: always
+  ports:
+   - "8080:8080"
+  volumes:
+   - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+   - ./:/app:ro
+  depends_on:
+   - django
