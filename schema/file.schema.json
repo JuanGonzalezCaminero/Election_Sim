@@ -21,7 +21,8 @@
             "properties": {
                 "threshold": {
                     "type": "number",
-                    "minimum": 0
+                    "minimum": 0,
+                    "maximum": 100
                 }
             }
         },
@@ -30,7 +31,7 @@
             "items": {
                 "type": "object",
                 "additionalProperties": false,
-                "required": ["name", "voters", "representatives", "blank", "null", "candiatures"],
+                "required": ["name", "voters", "representatives", "blank", "null", "candidatures"],
                 "properties": {
                     "name": {
                         "type": "string"
