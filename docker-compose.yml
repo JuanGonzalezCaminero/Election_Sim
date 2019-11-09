@@ -8,8 +8,6 @@ services:
   command: "uwsgi --socket :3031 --module democrazy.wsgi"
   environment:
    ENV: "PROD"
-  ports:
-   - "3031:3031"
   volumes:
    - ./:/app
   
