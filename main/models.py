@@ -1,10 +1,14 @@
 from django.db import models
 
+#  Modify a model
+#Run python manage.py makemigrations to create migrations for those changes
+#Run python manage.py migrate to apply those changes to the database.
+
 class Device(models.Model):
     id = models.IntegerField(primary_key=True)
     first_access = models.DateField()
     last_access = models.DateField()
-    default_min_votes_threshold = models.FloatField()
+    default_min_votes_threshold = models.FloatField(default=0.03)
 
 class ElectionType(models.Model):
     name = models.CharField(max_length=20)
