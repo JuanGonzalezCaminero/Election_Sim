@@ -5,5 +5,5 @@
 from .candidature import Candidature
 from .district import District 
 from .device import Device
-from .electiontype import ElectionType
+from .election_type import ElectionType
 from .election import Election 

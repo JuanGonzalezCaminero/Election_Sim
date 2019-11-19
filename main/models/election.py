@@ -1,5 +1,5 @@
 from django.db import models
-from .electiontype import ElectionType
+from .election_type import ElectionType
 from .device import Device
 
 class Election(models.Model):
