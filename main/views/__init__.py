@@ -1,2 +1,2 @@
-from .index import *
-from .results import * 
+from .index import IndexView
+from .results import ResultsView
