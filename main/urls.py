@@ -3,5 +3,5 @@ from .views import *
 
 urlpatterns = [
     path('', IndexView.as_view(), name="index"),
-    path('results/', ResultsView.as_view(), name="results"),
+    path('results/<int:election>/', ResultsView.as_view(), name="results"),
 ]
