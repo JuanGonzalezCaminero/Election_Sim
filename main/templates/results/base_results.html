@@ -1,0 +1,67 @@
+{% extends "base/base.html" %}
+{%block content %}
+    <div id="election_data_container">
+        <p>Elección</p>
+        <ul>
+            <li><b>Tipo: </b> {{results.election.type}}</li>
+            <li><b>Fecha: </b>{{results.election.date}}</li>
+        </ul>
+       
+    </div>
+
+    <div id="distribution_container" class="table_container">
+        <p>Distribución de escaños</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Posición</th>
+                    <th>Partido</th>
+                    <th>Escaños</th>
+                    <th>Número de votos</th>
+                    <th>% de votos</th>
+                </tr>                
+            </thead>
+            <tbody>
+                {%for party in results.distribution %}
+                <tr>
+                    <td>{{forloop.counter}}</td>
+                    <td>{{party.abbvr_name}} - {{party.name}}</td>
+                    <td>{{party.seats}}</td>
+                    <td>{{party.votes}}</td>
+                    <td>{{party.votes_percentage}} %</td>
+                </tr>                    
+                {% endfor %}
+            </tbody>
+           
+        </table>
+    </div>
+
+    <div id="special_votes_container" class="table_container">
+        <p>Otros votos</p>
+        <table>
+            <tr>
+                <th></th>
+                <th>Número de votos</th>
+                <th>% de votos</th>
+            </tr>
+            
+            <tr>
+                <td>En blanco</td>
+                <td>{{results.blank.votes}}</td>
+                <td>{{results.blank.votes_percentage}}</td>
+            </tr>
+            
+            <tr>
+                <td>Nulos</td>
+                <td>{{results.void.votes}}</td>
+                <td>{{results.void.votes_percentage}}</td>
+            </tr>    
+        </table>
+    </div>
+
+    <div>
+        <a href="/" class="base_buttom green">
+            Volver al inicio
+        </a>
+    </div>
+{%endblock content %}

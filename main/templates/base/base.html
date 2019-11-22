@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="/main/static/styles/base/base.css">
+    <link rel="stylesheet" type="text/css" href="/main/static/styles/base/buttoms.css">
+    <link rel="stylesheet" type="text/css" href="/main/static/styles/results/base_results.css">
+    <title>{% block title %}Democrazy{% endblock %}</title>
+</head>
+
+<body>
+    <header >
+        <img src="/main/static/photos/urna.png"/>
+        <p>Democrazy</p>
+    </header>
+
+    <div id ="sidebar">
+        {% block sidebar %}{% endblock %}
+    </div>
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+    
+</body>
+</html>
