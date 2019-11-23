@@ -54,7 +54,7 @@
         "properties": {
           "name": {
             "type": "string",
-            "pattern": "^([a-z]|[A-Z]){1,30}$"
+            "pattern": "^([a-z]|[A-Z]){1,120}$"
           },
           "voters": {
             "type": "number",
