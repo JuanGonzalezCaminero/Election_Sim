@@ -2,7 +2,8 @@ from main.models import *
 
 class ElectionService():
 
-    def getSeatDistribution(self, election_pk):
+    @staticmethod
+    def getSeatDistribution(election_pk):
         results = {
             "election" : {
                 "type": "Local",

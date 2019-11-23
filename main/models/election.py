@@ -15,6 +15,9 @@ class Election(models.Model):
 
 
     # Methods 
+    def getId(self):
+        return self.id 
+        
     def getDate(self):
         return self.date
 

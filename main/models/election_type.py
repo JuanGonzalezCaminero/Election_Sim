@@ -10,6 +10,9 @@ class ElectionType(models.Model):
 
 
     # Methods
+    def getId(self):
+        return self.id 
+        
     def getName(self):
         return self.name
     

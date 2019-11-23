@@ -13,6 +13,9 @@ class Device(models.Model):
 
 
     # Methods
+    def getId(self):
+        return self.id 
+        
     def getFirstAccess(self):
         return self.first_access
 
