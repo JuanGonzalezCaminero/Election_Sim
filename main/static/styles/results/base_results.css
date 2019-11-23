@@ -59,6 +59,6 @@
     background-color: rgb(204, 191, 191);
 }
 
-div:last-child {
+#redirect_index_container {
     padding: 20px;
 }
