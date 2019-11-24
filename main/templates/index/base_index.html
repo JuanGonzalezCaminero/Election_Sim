@@ -28,5 +28,43 @@
 {%endblock sidebar %}
 
 {%block content %}
-    <p>DEVICE ID: {{device_id}}</p>
+    <h1>Crear nueva elección</h1>
+    <form method="POST" action="/">
+        {% csrf_token %}
+        <label for="{{ form.date.id_for_label }}">Fecha: </label>
+        {{ form.date }}
+        <label for="{{ form.type.id_for_label }}">Tipo: </label>
+        {{ form.type }}
+        <label for="{{ form.min_votes_threshold.id_for_label }}">Umbral mínimo: </label>
+        {{ form.min_votes_threshold }}
+        <hr>
+        <p>Introduce una circunscripción inicial. Luego podrás añadir más.</p>
+        <label for="{{ form.district_name.id_for_label }}">Nombre: </label>
+        {{ form.district_name }}
+        <br>
+        <label for="{{ form.registered_voters.id_for_label }}">Censo: </label>
+        {{ form.registered_voters }}
+        <br>
+        <label for="{{ form.num_representatives.id_for_label }}">Escaños: </label>
+        {{ form.num_representatives }}
+        <br>
+        <label for="{{ form.blank_votes.id_for_label }}">Votos en blanco: </label>
+        {{ form.blank_votes }}
+        <br>
+        <label for="{{ form.void_votes.id_for_label }}">Votos nulos: </label>
+        {{ form.void_votes }}
+        <br>
+        <hr>
+        <p>Introduce una candidatura inicial. Luego podrás añadir más.</p>
+        <label for="{{ form.cand_name.id_for_label }}">Nombre: </label>
+        {{ form.cand_name }}
+        <br>
+        <label for="{{ form.abrv_name.id_for_label }}">Abreviatura: </label>
+        {{ form.abrv_name }}
+        <br>
+        <label for="{{ form.votes.id_for_label }}">Votos recibidos: </label>
+        {{ form.votes }}
+        <br>
+        <input type="submit" value="Crear nuevas elecciones">
+    </form>
 {%endblock content %}
