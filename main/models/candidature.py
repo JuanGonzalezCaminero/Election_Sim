@@ -13,8 +13,13 @@ class Candidature(models.Model):
     votes = models.PositiveIntegerField()
     district = models.ForeignKey(District, on_delete=models.CASCADE)
 
-
+    
     # Methods
+    def __str__(self):
+    	return("Name: " + str(self.name) + "\n" +  
+    		"abrv_name: " + str(self.abrv_name) + "\n" +  
+    		"votes: " + str(self.votes) + "\n")
+
     def getId(self):
         return self.id 
         
@@ -28,4 +33,4 @@ class Candidature(models.Model):
         return self.votes 
 
     def getDistrictId(self):
-        self.distritct
+        return self.distritct

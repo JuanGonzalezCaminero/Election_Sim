@@ -15,6 +15,13 @@ class District(models.Model):
     election = models.ForeignKey(Election, on_delete=models.CASCADE)
 
     # Methods
+    def __str__(self):
+    	return("Name: " + str(self.name) + "\n" +  
+    		"registered_voters: " + str(self.registered_voters) + "\n" +  
+    		"num_representatives: " + str(self.num_representatives) + "\n" +  
+    		"blank_votes: " + str(self.blank_votes) + "\n" +  
+    		"void_votes: " + str(self.void_votes))
+
     def getId(self):
         return self.id 
         
