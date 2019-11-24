@@ -12,10 +12,9 @@
     display:flex;
     flex-flow: column;
     justify-content: flex-start;
-    align-items: center;
     align-content: center;
     background: #F9F7F3;
-
+    overflow: hidden;
 }
 
 /* Election data */ 
@@ -25,7 +24,7 @@
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    margin: 20px 0 ;
+    margin: 0 0 20px 0 ;
 }
 
 
@@ -52,14 +51,17 @@
     justify-content: space-around;
     align-content: flex-start;
     align-items: center;
+    overflow-y: auto;
+    border: 1px solid #0FA3B1;
 }
 
 #global_results_container table {
     margin: 10px 0 0 0;
 }
 
-
-
 #redirect_index_container {
-    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    padding: 15px;
 }

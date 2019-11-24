@@ -1,12 +1,13 @@
 
 #index_sidebar {
-min-width: 100px;
+    min-width: 100px;
    background: #F9F7F3;
    flex: 1;
    display: flex;
    flex-flow: column;
    justify-content: flex-start;
    align-content: center;
+   overflow-y: hidden;
 }
 
 #election_history_container {
@@ -15,21 +16,16 @@ min-width: 100px;
    flex-flow: column;
    justify-content: flex-start;
    align-content: center;
-   padding: 0;    
+   padding: 0;   
+   overflow: hidden; 
 } 
 
 #election_history_container  p { 
     text-align: center;
     padding: 10px;
     text-justify: distribute;
-
 }
 
-#election_history_container h3 {
-    text-align: center;
-    color:#0FA3B1;
-    margin-bottom: 20px;
-}
 
 #election_history_list {
     padding: 0;
@@ -38,8 +34,10 @@ min-width: 100px;
     flex-flow: column;
     justify-content: flex-start;
     align-content: center;    
+    overflow-y: auto
 }
 
+/* Election card */
 .election_card {
     display: flex;
     flex-flow: column;
@@ -72,13 +70,3 @@ min-width: 100px;
         padding: 5px 10px;
         font-size: 10pt;        
     }
-
-
-#pallete {
-    color: #0FA3B1 ;
-    color: #B5E2FA ;
-    color: #F9F7F3 ;
-    color: #EDDEA4 ;
-    color: #F7A072 ;
- 
- }

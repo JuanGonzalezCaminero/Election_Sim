@@ -6,11 +6,11 @@
     align-items: center;
     align-content: center;
     margin: 20px ;
+    overflow: hidden;
 }
 
-.table_container p {
-    color: rgb(211, 140, 102);
-    font-weight: bold;
+.table_container table {
+    overflow: hidden;
 }
 
 .table_container table, 
@@ -30,5 +30,9 @@
 .table_container  th { 
     color: rgb(9, 110, 119) ;
     background-color: #B5E2FA ;
+}
+
+.table_container  tbody {
+    overflow-y: auto;
 }
 

@@ -1,9 +1,9 @@
 {% extends "base/base.html" %}
 
 {%block sidebar %}
-<div class="index_sidebar">
+<div id="index_sidebar">
     <div id="election_history_container">
-        <h3>Historial</h3>
+        <h1>Historial</h1>
         {%if history|length == 0 %} 
             <p>No hay entradas en su historial</p>
         {% else %}
@@ -14,7 +14,7 @@
                             Elección {{forloop.counter}}
                         </span>
                     <span class="election_card_date">
-                            <b>Fecha:</b> {{election.date|date:"d-m-Y"}}
+                            <b>Fecha:</b> {{election.date}}
                     </span>
                     <span class="election_card_type">
                             <b>Tipo:</b> {{election.type}}
