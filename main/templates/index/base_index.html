@@ -1,4 +1,32 @@
 {% extends "base/base.html" %}
+
+{%block sidebar %}
+
+<div id="election_history_container">
+    <h3>Historial</h3>
+    {%if history|length == 0 %} 
+        <p>No hay entradas en su historial</p>
+    {% else %}
+        <div id="election_history_list">
+            {% for election in history %}               
+                <div class="election_card">
+                    <span class="election_card_header">
+                        Elección {{forloop.counter}}
+                    </span>
+                   <span class="election_card_date">
+                        <b>Fecha:</b> {{election.date}}
+                   </span>
+                   <span class="election_card_type">
+                        <b>Tipo:</b> {{election.type}}
+                   </span>
+                </div>               
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+
+{%endblock sidebar %}
+
 {%block content %}
-    <p>INDEX PAGE</p>
+    <p>DEVICE ID: {{device_id}}</p>
 {%endblock content %}

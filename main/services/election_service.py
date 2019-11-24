@@ -46,6 +46,9 @@ class ElectionService():
         total_special_votes["void_percentage"] = total_special_votes["void"]/total_votes
 
 
+    @staticmethod
+    def getMockSeatDistribution(election_pk):
+
         results = {
             "election" : {
                 "type": election.type.name,

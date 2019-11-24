@@ -1,24 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="stylesheet" type="text/css" href="/main/static/styles/base/base.css">
-    <link rel="stylesheet" type="text/css" href="/main/static/styles/base/buttoms.css">
-    <link rel="stylesheet" type="text/css" href="/main/static/styles/results/base_results.css">
-    <title>{% block title %}Democrazy{% endblock %}</title>
-</head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/main/static/styles/base/base.css?{% now "U" %}">
+        <link rel="stylesheet" type="text/css" href="/main/static/styles/base/buttoms.css?{% now "U" %}">
+        <link rel="stylesheet" type="text/css" href="/main/static/styles/results/base_results.css?{% now "U" %}">
+        <link rel="stylesheet" type="text/css" href="/main/static/styles/index/base_index.css?{% now "U" %}">
 
-<body>
-    <header >
-        <img src="/main/static/photos/urna.png"/>
-        <p>Democrazy</p>
-    </header>
+        <title>{% block title %}Democracy{% endblock %}</title>
+    </head>
 
-    <div id ="sidebar">
-        {% block sidebar %}{% endblock %}
-    </div>
-    <div id="content">
-        {% block content %}{% endblock %}
-    </div>
-    
-</body>
+    <body>
+        <header >
+            <img src="/main/static/photos/urna.png"/>
+            <p>Democracy</p>
+        </header>
+
+        <main>
+            <section id ="sidebar">
+                {% block sidebar %}{% endblock %}
+            </section>
+
+            <section id="content">
+                {% block content %}{% endblock %}
+            </section>
+        </main>  
+
+        <footer>
+           <p> Adrian Arroyo - Pablo Valdunciel - Juan González</p> 
+        </footer>
+        
+    </body>
 </html>
