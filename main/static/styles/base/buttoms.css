@@ -9,9 +9,21 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    font-weight: 1200;
+    font-weight: bold;
 }
 
-.base_buttom.green {
-    background-color: #4CAF50; /* Green */
+.base_buttom.orange {
+    background-color: #F7A072; /* Green */
+}
+
+.base_buttom.dark_blue {
+    background-color: #0FA3B1;
+}
+
+.base_buttom.light_blue {
+    background-color: #B5E2FA ;
+}
+
+.base_buttom.yellow {
+    background-color: #EDDEA4;
 }

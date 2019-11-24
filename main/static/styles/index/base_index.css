@@ -1,14 +1,21 @@
 
+#index_sidebar {
+min-width: 100px;
+   background: #F9F7F3;
+   flex: 1;
+   display: flex;
+   flex-flow: column;
+   justify-content: flex-start;
+   align-content: center;
+}
+
 #election_history_container {
    flex: 1;
    display: flex;
    flex-flow: column;
    justify-content: flex-start;
    align-content: center;
-   padding: 0; 
-   min-width: 100px;
-   background: #F9F7F3 ;
-   
+   padding: 0;    
 } 
 
 #election_history_container  p { 
