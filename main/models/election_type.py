@@ -8,7 +8,8 @@ class ElectionType(models.Model):
     name = models.CharField(max_length=20, validators=[RegexValidator(regex=r"^([a-z]|[A-Z]){1,20}$",
                                                                       message="ElectionType's name can contain only alphabetic characters")])
 
-
+    def __str__(self):
+        return self.name
     # Methods
     def getId(self):
         return self.id 

@@ -4,8 +4,7 @@ import datetime
 
 class DeviceService():
 
-    @staticmethod
-    def getDeviceId(request):
+    def __init__(self, request):
         try:
             user_id = request.session["user_id"]
 
@@ -18,14 +17,19 @@ class DeviceService():
             request.session["user_id"] = user_id
 
         # user_id contains a valid device id
-        device = Device.objects.get(id=user_id)
-        
-        return device.getId()
+        self.__device = Device.objects.get(id=user_id)
 
-    @staticmethod
-    def getDeviceExecutionHistory(device_pk):
+    @property
+    def id(self):
+        return self.__device.getId()
+
+    @property
+    def device(self):
+        return self.__device
+
+    def get_device_execution_history():
         try:
-            history = Election.objects.get(device=device_pk)
+            history = Election.objects.get(device=self.__device)
         except:
             pass
         
