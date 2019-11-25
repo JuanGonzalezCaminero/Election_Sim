@@ -10,8 +10,8 @@ class DeviceService():
 
         except KeyError:
             device = Device.objects.create(
-                first_access=datetime.date.today(),
-                last_access=datetime.date.today()
+                first_access = datetime.date.today(),
+                last_access = datetime.date.today()
             )
             user_id = device.getId()
             request.session["user_id"] = user_id
@@ -21,13 +21,14 @@ class DeviceService():
 
     @property
     def id(self):
-        return self.__device.getId()
+        return self.__device.get_id()
 
     @property
     def device(self):
         return self.__device
 
-    def get_device_execution_history():
+
+    def get_device_execution_history(self):
         try:
             history = Election.objects.get(device=self.__device)
         except:

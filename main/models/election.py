@@ -21,17 +21,17 @@ class Election(models.Model):
     			"Type: " + str(self.type) + "\n" + 
     			"Device: " + str(self.device))
 
-    def getId(self):
+    def get_id(self):
         return self.id 
         
-    def getDate(self):
+    def get_date(self):
         return self.date
 
-    def getMinVotesThreshold(self):
+    def get_min_votes_threshold(self):
         return self.min_votes_threshold
 
-    def getType(self):
+    def get_type(self):
         return self.type.getName() 
 
-    def getDeviceId(self):
+    def get_device_id(self):
         return self.device

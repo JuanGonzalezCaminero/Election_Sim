@@ -20,17 +20,17 @@ class Candidature(models.Model):
     		"abrv_name: " + str(self.abrv_name) + "\n" +  
     		"votes: " + str(self.votes) + "\n")
 
-    def getId(self):
+    def get_id(self):
         return self.id 
         
-    def getName(self):
+    def get_name(self):
         return self.name 
     
-    def getAbbverName(self):
+    def get_abrv_name(self):
         return self.abrv_name
 
-    def getVotes(self):
+    def get_votes(self):
         return self.votes 
 
-    def getDistrictId(self):
+    def get_district_id(self):
         return self.distritct

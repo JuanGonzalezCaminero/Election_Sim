@@ -13,14 +13,14 @@ class Device(models.Model):
 
 
     # Methods
-    def getId(self):
+    def get_id(self):
         return self.id 
         
-    def getFirstAccess(self):
+    def get_first_access(self):
         return self.first_access
 
-    def getLastAccess(self):
+    def get_last_access(self):
         return self.last_access
 
-    def getDefaultMinVotesThreshold(self):
+    def get_default_min_votes_threshold(self):
         return self.default_min_votes_threshold

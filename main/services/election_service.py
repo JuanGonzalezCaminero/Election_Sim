@@ -1,13 +1,13 @@
 from main.models import Election, District, Candidature
 from django.shortcuts import get_object_or_404
-import numpy as np
 from .district_service import DistrictService
+import numpy as np
 
 class ElectionService():
     districtService = DistrictService()
 
-    def getSeatDistribution(self, election_pk):
-        
+    def get_seat_distribution(self, election_pk):
+        """ """
         election = get_object_or_404(Election, pk=election_pk)
         districts = District.objects.filter(election=election_pk)
 
@@ -16,7 +16,7 @@ class ElectionService():
         district_results = []
 
         for d in districts:
-            seat_distribution, special_votes = self.districtService.getSeatDistribution(d, election.min_votes_threshold)
+            seat_distribution, special_votes = self.districtService.get_seat_distribution(d, election.get_min_votes_threshold())
 
             district_results.append({"name" : d.name,
                                       "candidatures" : seat_distribution,

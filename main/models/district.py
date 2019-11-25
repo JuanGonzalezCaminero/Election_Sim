@@ -22,27 +22,23 @@ class District(models.Model):
     		"blank_votes: " + str(self.blank_votes) + "\n" +  
     		"void_votes: " + str(self.void_votes))
 
-    def getId(self):
+    def get_id(self):
         return self.id 
         
-    def getName(self):
+    def get_name(self):
         return self.name
 
-    def getRegisteredVoters(self):
+    def get_registered_voters(self):
         return self.registered_voters
 
-    def getNumRepresentatives(self):
+    def get_num_representatives(self):
         return self.num_representatives
     
-    def getBlankVotes(self):
+    def get_blanck_votes(self):
         return self.blank_votes
 
-    def getVoidVotes(self):
+    def vet_void_votes(self):
         return self.blank_votes
     
-    def getElectionId(self):
+    def get_election_id(self):
         return self.election 
-
-    def getSetDistribution(self):
-        #TODO
-        return None
