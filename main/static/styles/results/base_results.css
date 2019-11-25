@@ -17,6 +17,15 @@
     overflow: hidden;
 }
 
+/* Index Button */
+#redirect_index_container {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 15px 0 0 15px ;
+}
+
+
 /* Election data */ 
 #election_data_container {
     display: flex;
@@ -24,7 +33,7 @@
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    margin: 0 0 20px 0 ;
+    margin: 0 0 30px 0 ;
 }
 
 
@@ -42,26 +51,61 @@
 }
 
 
+/* Results */
+#results_container {
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+}
+
+#headers_container {
+    display: flex;
+    flex-flow: row;
+}
+#headers_container h1 {
+    flex: 1;
+}
+
 /* Global results */
 #global_results_container {
     flex: 1;
     display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
     align-content: flex-start;
     align-items: center;
+    overflow-x: hidden;
     overflow-y: auto;
-    border: 1px solid #0FA3B1;
+    margin: 0;
+    border-top: 3px solid #0FA3B1;
 }
 
-#global_results_container table {
-    margin: 10px 0 0 0;
+#global_results_contain h1 {
+    flex: 1;
 }
 
-#redirect_index_container {
+
+/* District results */
+#district_results_container {
+    flex: 1;
     display: flex;
-    align-content: center;
-    justify-content: center;
-    padding: 15px;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    border-top: 3px solid #0FA3B1;
+    border-left: 3px solid #0FA3B1;
+}
+
+.district_container {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    border-bottom: 1px solid #0FA3B1 ;
+    padding: 10px 0;
 }

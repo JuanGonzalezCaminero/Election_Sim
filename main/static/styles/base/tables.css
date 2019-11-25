@@ -1,38 +1,39 @@
 
-.table_container {
+.results_table_container {
+    flex: 1;
     display: flex;
     flex-flow: column;
     justify-content: center;
     align-items: center;
     align-content: center;
-    margin: 20px ;
+    margin: 0;
+    padding: 25px;
+}
+
+.results_table_container table {
     overflow: hidden;
 }
 
-.table_container table {
-    overflow: hidden;
-}
-
-.table_container table, 
-.table_container  th, 
-.table_container  td  {
+.results_table_container table, 
+.results_table_container  th, 
+.results_table_container  td  {
    background-color: white;
    border-collapse: collapse;
    border: 3px solid #0FA3B1;
 }
 
-.table_container  th, 
-.table_container  td {
+.results_table_container  th, 
+.results_table_container  td {
     padding: 5px;
     text-align: center;
 }
 
-.table_container  th { 
+.results_table_container  th { 
     color: rgb(9, 110, 119) ;
     background-color: #B5E2FA ;
 }
 
-.table_container  tbody {
+.results_table_container  tbody {
     overflow-y: auto;
 }
 
