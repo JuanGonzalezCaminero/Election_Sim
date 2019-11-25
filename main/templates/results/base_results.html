@@ -99,7 +99,7 @@
                                 <td>{{candidature.abrv_name}} - {{candidature.name}}</td>
                                 <td>{{candidature.seats}}</td>
                                 <td>{{candidature.votes}}</td>
-                                <td>{{candidature.votes_percentage}} %</td>
+                                <td>{{candidature.votes_percentage|floatformat:4}}</td>
                             </tr>                    
                             {% endfor %}
                         </tbody>
@@ -120,13 +120,13 @@
                         <tr>
                             <td>En blanco</td>
                             <td>{{district.special_votes.blank}}</td>
-                            <td>{{district.special_votes.blank_percentage}}</td>
+                            <td>{{district.special_votes.blank_percentage|floatformat:4}}</td>
                         </tr>
                         
                         <tr>
                             <td>Nulos</td>
                             <td>{{district.special_votes.void}}</td>
-                            <td>{{district.special_votes.void_percentage}}</td>
+                            <td>{{district.special_votes.void_percentage|floatformat:4}}</td>
                         </tr>    
                     </table>
                 </div>
