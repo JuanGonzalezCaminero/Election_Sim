@@ -1,0 +1,34 @@
+#pallete {
+    color: #0FA3B1 ;
+    color: #B5E2FA ;
+    color: #F9F7F3 ;
+    color: #EDDEA4 ;
+    color: #F7A072 ; 
+ }
+
+h1 {
+    color: #0FA3B1;
+    font-size: 15pt;
+    font-weight: bold;
+    margin:0px;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+h2 {
+    color: #F7A072 ;
+    font-size: 12pt;
+    font-weight: bold;
+    margin:0px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+h3 {
+    color: rgba(212, 179, 45, 0.788);
+    font-size: 10pt;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 8px;
+    text-align: center;
+}

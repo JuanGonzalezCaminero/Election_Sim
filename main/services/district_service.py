@@ -3,9 +3,8 @@ from django.shortcuts import get_object_or_404
 import numpy as np
 
 class DistrictService:
-	def getDistrictName(district_pk):
-		#district = get_object_or_404(District, pk=district_pk)   
-		return 'district_service_funcionando' #district.name 
+
+	
 
 	def getSeatDistribution(self, district, min_votes_threshold):
 		candidatures_query = Candidature.objects.filter(district = district.pk)

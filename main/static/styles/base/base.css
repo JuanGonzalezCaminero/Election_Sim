@@ -21,6 +21,7 @@ body {
     flex-flow: column;
     flex-wrap: nowrap;
     margin: 0;
+    overflow: hidden;
 }
 
 /* Header */
@@ -28,15 +29,15 @@ header {
     display:flex;
     justify-content: center;
     align-content: center;
-    align-items: baseline;
+    align-items: center;
     background-color: #0FA3B1;
     min-height: 80px;
     padding-top: 10px;
 }
 
     header img {
-        width: 40px;
-        height: 40px;
+        width: 55px;
+        height: auto;
     }
 
     header p {
@@ -51,25 +52,27 @@ main {
     flex:1;
     display: flex;
     flex-flow: row;
+    overflow: hidden;
 }
 
     /* Main Sidebar */ 
-    main section#sidebar {
+    main section#block_sidebar {
         display: flex;
         flex-flow: column;
         align-items: center;
         border-right: 3px solid #0FA3B1;
+        overflow: hidden;
     }
 
     /* Main Content */
-    main section#content {
+    main section#block_content {
         flex:1;
         height: 100%;
         display: flex;
-        flex-flow: column;
+        flex-flow: row;
+        justify-content: center;
         align-content: center;
-        justify-content: first baseline;
-        align-items: center;
+        overflow: hidden;
     }
 
 

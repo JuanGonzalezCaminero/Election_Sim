@@ -1,3 +1,30 @@
+#pallete {
+    color: #0FA3B1 ;
+    color: #B5E2FA ;
+    color: #F9F7F3 ;
+    color: #EDDEA4 ;
+    color: #F7A072 ;
+ 
+ }
+
+#results_content {
+    flex:1;
+    display:flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-content: center;
+    background: #F9F7F3;
+    overflow: hidden;
+}
+
+/* Index Button */
+#redirect_index_container {
+    display: flex;
+    align-content: center;
+    justify-content: flex-start;
+    padding: 15px 0 0 15px ;
+}
+
 
 /* Election data */ 
 #election_data_container {
@@ -6,59 +33,79 @@
     justify-content: flex-start;
     align-items: center;
     align-content: center;
-    margin: 20px 0 0 0;
+    margin: 0 0 30px 0 ;
 }
 
-#election_data_container p {
-    font-weight: bold;
-    margin: 0;
-}
 
 #election_data_container ul {
+    background-color: white;
     list-style-type: none;
-    border: 1px solid black;
+    border: 3px solid #0FA3B1;
     margin: 5px 0 0 0;
     padding: 10px;
 }
 
 #election_data_container li {
     margin: 0;
-    padding: 0;
+    padding: 5px 10px;
 }
 
 
-/* Seat distribution and Special Votes  */
-.table_container {
+/* Results */
+#results_container {
+    display: flex;
+    flex-flow: row;
+    overflow: hidden;
+}
+
+#headers_container {
+    display: flex;
+    flex-flow: row;
+}
+#headers_container h1 {
+    flex: 1;
+}
+
+/* Global results */
+#global_results_container {
+    flex: 1;
     display: flex;
     flex-flow: column;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
     align-items: center;
-    align-content: center;
-    margin: 20px 0 10px 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    border-top: 3px solid #0FA3B1;
 }
 
-.table_container p {
-    font-weight: bold;
+#global_results_contain h1 {
+    flex: 1;
 }
 
-.table_container table, 
-.table_container  th, 
-.table_container  td  {
-   background-color: white;
-   border-collapse: collapse;
-   border: 3px solid rgb(155, 146, 146);
+
+/* District results */
+#district_results_container {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: flex-start;
+    align-items: center;
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 0;
+    border-top: 3px solid #0FA3B1;
+    border-left: 3px solid #0FA3B1;
 }
 
-.table_container  th, 
-.table_container  td {
-    padding: 5px;
-    text-align: center;
-}
-
-.table_container  th { 
-    background-color: rgb(204, 191, 191);
-}
-
-#redirect_index_container {
-    padding: 20px;
+.district_container {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    border-bottom: 1px solid #0FA3B1 ;
+    padding: 10px 0;
 }

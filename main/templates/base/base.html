@@ -3,6 +3,9 @@
     <head>
         <link rel="stylesheet" type="text/css" href="/main/static/styles/base/base.css?{% now "U" %}">
         <link rel="stylesheet" type="text/css" href="/main/static/styles/base/buttoms.css?{% now "U" %}">
+        <link rel="stylesheet" type="text/css" href="/main/static/styles/base/tables.css?{% now "U" %}">
+        <link rel="stylesheet" type="text/css" href="/main/static/styles/base/headers.css?{% now "U" %}">
+        <link rel="stylesheet" type="text/css" href="/main/static/styles/base/scrollbars.css?{% now "U" %}">
         <link rel="stylesheet" type="text/css" href="/main/static/styles/results/base_results.css?{% now "U" %}">
         <link rel="stylesheet" type="text/css" href="/main/static/styles/index/base_index.css?{% now "U" %}">
 
@@ -16,11 +19,11 @@
         </header>
 
         <main>
-            <section id ="sidebar">
+            <section id ="block_sidebar">
                 {% block sidebar %}{% endblock %}
             </section>
 
-            <section id="content">
+            <section id="block_content">
                 {% block content %}{% endblock %}
             </section>
         </main>  
