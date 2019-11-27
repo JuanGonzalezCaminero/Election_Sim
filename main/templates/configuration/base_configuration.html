@@ -6,6 +6,7 @@
         <h2>Configuración por defecto</h2>
         <div id="configuration_form_container">           
             <form id="configuration_form" method="POST" action="/">
+                {% csrf_token %}
                 <p>
                     <label for="{{form.default_min_votes_threshold.id_for_label }}">
                         Umbral mínimo de representación por defecto:
