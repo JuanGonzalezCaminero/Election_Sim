@@ -1,0 +1,23 @@
+{% extends "base/base.html" %}
+{%load static %}
+
+{%block content %}
+    <div id="configuration_content">        
+        <h2>Configuración por defecto</h2>
+        <div id="configuration_form_container">           
+            <form id="configuration_form" method="POST" action="/">
+                {% csrf_token %}
+                <p>
+                    <label for="{{form.default_min_votes_threshold.id_for_label }}">
+                        Umbral mínimo de representación por defecto:
+                    </label>
+                    {{form.default_min_votes_threshold}}
+                </p>            
+                <div id="configuration_buttons_container">
+                    <a href="/" class="base_button orange"> Cancelar </a>
+                    <input id="submit_input" type="submit" class="base_button dark_blue" value="Guardar">
+                </div>
+            </form>
+        </div>
+    </div>
+{%endblock content %}
