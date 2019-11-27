@@ -69,8 +69,8 @@ main {
         flex:1;
         height: 100%;
         display: flex;
-        flex-flow: row;
-        justify-content: center;
+        flex-flow: column;
+        justify-content: flex-start;
         align-content: center;
         overflow: hidden;
     }

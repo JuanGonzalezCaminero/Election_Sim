@@ -1,4 +1,5 @@
 {% extends "base/base.html" %}
+{%load static %}
 
 {%block sidebar %}
 <div id="index_sidebar">
@@ -30,6 +31,14 @@
 {%endblock sidebar %}
 
 {%block content %}
+    <div id="settings_container">       
+        <a onclick="document.getElementById('conf_modal').style.display='block'" class="text_button orange"> 
+            <img src="{% static 'photos/settings.png' %}"/>
+            Configuración 
+        </a>
+        {% include "index/configuration_modal.html" %}  
+    </div>
+
     <h1>Crear nueva elección</h1>
     <form method="POST" action="/">
         {% csrf_token %}

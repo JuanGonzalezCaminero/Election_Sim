@@ -1,0 +1,23 @@
+<div id="conf_modal" class="modal_window">
+    <div class="modal_content">
+        <div class="modal_header">
+            <a onclick="document.getElementById('conf_modal').style.display='none'" class="text_button orange">
+               X
+            </a>
+        </div>
+        <h1>Configuración por defecto</h1>
+       <div class="modal_body">            
+           <label>Mínimo % de votos para obtener representación:</label>
+           <input type="text">{{min_votes_threshold}} </input>
+           <p class="error"></p>
+       </div>
+       <div class="modal_buttons_container">
+            <a onclick="document.getElementById('conf_modal').style.display='none'" class="base_button orange">
+                Cancelar 
+            </a>
+            <a class="base_button dark_blue">
+                Guardar
+            </a>
+        </div>
+    </div>
+</div>
