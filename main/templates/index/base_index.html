@@ -13,12 +13,14 @@
                         <span class="election_card_header">
                             Elección {{forloop.counter}}
                         </span>
-                    <span class="election_card_date">
-                            <b>Fecha:</b> {{election.date}}
-                    </span>
-                    <span class="election_card_type">
-                            <b>Tipo:</b> {{election.type}}
-                    </span>
+                        <div class="election_card_body">
+                            <span class="election_card_date">
+                                <b>Fecha:</b> {{election.date}}
+                            </span>
+                            <span class="election_card_type">
+                                    <b>Tipo:</b> {{election.type}}
+                            </span>
+                        </div>                    
                     </div>               
                 {% endfor %}
             </div>

@@ -16,15 +16,9 @@
    flex-flow: column;
    justify-content: flex-start;
    align-content: center;
-   padding: 0;   
+   padding: 20px 10px 10px 10px;   
    overflow: hidden; 
 } 
-
-#election_history_container  p { 
-    text-align: center;
-    padding: 10px;
-    text-justify: distribute;
-}
 
 
 #election_history_list {
@@ -41,32 +35,39 @@
 .election_card {
     display: flex;
     flex-flow: column;
-    border: 3px solid #F7A072 ;
-    border-radius: 10px;
+    border: none;
     margin: 15px;
     padding: 0;
 }
-    .election_card .election_card_header {
-        
+    .election_card_header {        
         background: #F7A072 ;
         text-align: center;
         color: rgb(2, 84, 92);
         font-size: 11pt;
-        border: 0;
+        font-weight: bold;
+        border: 2px solid #F7A072;
         border-radius: 5px 5px 0 0;
         margin: 0;
         padding: 5px 0;
     }
 
-    .election_card .election_card_date{
-        margin: 0;
-        padding: 5px 10px;
-        font-size: 10pt;
-       
+    .election_card_body {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        border: 2px solid #F7A072;
+        border-radius: 0 0 5px 5px;
     }
 
-    .election_card .election_card_type {
-        margin: 0;
-        padding: 5px 10px;
-        font-size: 10pt;        
-    }
+        .election_card_date{
+            margin: 0;
+            padding: 5px 10px;
+            font-size: 10pt;
+        
+        }
+
+        .election_card_type {
+            margin: 0;
+            padding: 5px 10px;
+            font-size: 10pt;        
+        }

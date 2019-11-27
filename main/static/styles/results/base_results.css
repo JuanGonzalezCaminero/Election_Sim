@@ -78,7 +78,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     margin: 0;
-    border-top: 3px solid #0FA3B1;
+    border-top: 10px solid rgba(15, 163, 177, 0.127);
 }
 
 #global_results_contain h1 {
@@ -98,8 +98,7 @@
     overflow-x: hidden;
     overflow-y: auto;
     margin: 0;
-    border-top: 3px solid #0FA3B1;
-    border-left: 3px solid #0FA3B1;
+    border-top: 10px solid rgba(15, 163, 177, 0.127);
 }
 
 .district_container {
