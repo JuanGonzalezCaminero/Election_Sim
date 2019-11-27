@@ -1,0 +1,21 @@
+
+.base_label {
+    font-weight: 900;
+}
+
+
+.base_label.orange {
+    color: #F7A072;
+}
+
+.base_label.dark_blue {
+    color: #0FA3B1;
+}
+
+.base_label.light_blue {
+    color: #B5E2FA ;
+}
+
+.base_label.yellow {
+    color: #EDDEA4;
+}

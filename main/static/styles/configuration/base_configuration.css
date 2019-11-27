@@ -1,0 +1,45 @@
+
+#configuration_content {
+    flex:1;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background: #F9F7F3;
+}
+
+#configuration_content h2 {
+    font-size: 20pt;
+}
+
+#configuration_form_container {
+    display: flex;
+    flex-flow: column;
+    border: 3px solid #0FA3B1;
+    border-radius: 10px;
+    width: 33%;
+    height: 33%;
+}
+
+#configuration_form {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+
+#configuration_buttons_container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-content: center;
+
+}
+
+#configuration_buttons_container * {
+    height: fit-content;
+    margin: 20px 20px 20px 0;
+}

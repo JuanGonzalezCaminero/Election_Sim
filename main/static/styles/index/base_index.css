@@ -28,6 +28,7 @@
     #settings_container a {
         display: flex;
         align-content: center;
+        text-decoration: none;
     }
 
 /* Elections history */
