@@ -13,6 +13,12 @@ class Device(models.Model):
 
 
     # Methods
+    def __str__(self):
+        return ("ID: " + str(self.id) + "\n" +  
+                "First access: " + str(self.first_access) + "\n" +
+                "Last access: "  + str(self.last_access)  + "\n" +
+     		    "default_min_votes_threshold: " + str(self.default_min_votes_threshold) + "\n")
+        
     def get_id(self):
         return self.id 
         

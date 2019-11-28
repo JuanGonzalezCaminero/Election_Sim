@@ -1,0 +1,19 @@
+
+.myform input[type="number"]  {
+    border-radius: 5px;
+    padding: 2px 5px;
+    max-width: 70px;
+}
+
+.myform label {
+
+}
+
+
+.success {
+    color: rgb(32, 92, 32);
+}
+
+.error {
+    color: rgb(141, 41, 41);
+}
