@@ -14,18 +14,20 @@ class ConfigurationView(TemplateView):
         device_service = DeviceService(request)
         default_min_votes_threshold = device_service.device.get_default_min_votes_threshold()
         context["form"] = ConfigurationForm(initial={"default_min_votes_threshold" : default_min_votes_threshold})
+        context["saved"] = False
         return self.render_to_response(context)        
 
 
     def post(self, request, *args, **kwargs):
         context = self.get_context_data(*args, **kwargs)
-        device = DeviceService(request)
+        device_service = DeviceService(request)
         form = ConfigurationForm(request.POST)
+        saved = False
+        
+       
+        if form.is_valid():    
+            device_service.modify_default_configuration(form['default_min_votes_threshold'].value())
+            saved = True               
 
-        if form.is_valid():
-            #Set new default minimum votes threshold
-
-            return redirect("/")
-        else:          
-            return redirect("configuration/")
+        return render(request, self.template_name, {'form': form, 'saved' : saved})   
 

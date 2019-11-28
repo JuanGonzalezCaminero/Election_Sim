@@ -3,23 +3,31 @@
     flex:1;
     display: flex;
     flex-flow: column;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    justify-content: flex-start;
     background: #F9F7F3;
 }
 
-#configuration_content h2 {
-    font-size: 20pt;
+#decorator_container {
+    flex:1;
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+}
+
+#decorator_container h1 {
+    font-size: 18pt;
 }
 
 #configuration_form_container {
     display: flex;
     flex-flow: column;
-    border: 3px solid #0FA3B1;
+    border: 3px solid #F7A072;
     border-radius: 10px;
     width: 33%;
     height: 33%;
+    background-color: rgba(237, 222, 164, 0.658) ;
 }
 
 #configuration_form {
@@ -30,16 +38,16 @@
     padding: 25px;
 }
 
-
-#configuration_buttons_container {
+#configuration_button_container {
     display: flex;
     flex-flow: row;
     justify-content: center;
+    align-items: center;
     align-content: center;
-
 }
 
-#configuration_buttons_container * {
+
+#submit_input {
     height: fit-content;
     margin: 20px 20px 20px 0;
 }

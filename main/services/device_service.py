@@ -35,3 +35,12 @@ class DeviceService():
             pass
         
         return history
+
+
+    def modify_default_configuration(self, new_min_votes_threshold):
+        try:
+            self.__device.default_min_votes_threshold = new_min_votes_threshold
+            self.__device.save()
+
+        except:
+            pass
