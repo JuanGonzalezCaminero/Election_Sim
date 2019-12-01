@@ -8,7 +8,6 @@ from main.forms import IndexForm
 
 
 
-
 class IndexView(TemplateView):
     
     template_name ="index/base_index.html"
@@ -27,16 +26,16 @@ class IndexView(TemplateView):
 
     def get (self, request, *args, **kwargs):
         context = self.get_context_data( *args, **kwargs)
-        device = DeviceService(request)
-        context["device_id"] = device.id
+        device_service = DeviceService(request)
+        context["device_id"] = device_service.get_id()
         context["history"] = self.mock_history
-        context["min_votes"] = device.device.get_default_min_votes_threshold()
+        context["min_votes"] = device_service.get_default_configuration()
         return self.render_to_response(context)
 
 
     def post(self, request, *args, **kwargs):
         context = self.get_context_data(*args, **kwargs)
-        device = DeviceService(request)
+        device_service = DeviceService(request)
         form = IndexForm(request.POST)
 
         if form.is_valid():
@@ -44,7 +43,7 @@ class IndexView(TemplateView):
                 date = form.cleaned_data["date"],
                 type = form.cleaned_data["type"],
                 min_votes_threshold = form.cleaned_data["min_votes_threshold"],
-                device = device.device
+                device = device_service.device
             )
             district = District.objects.create(
                 name = form.cleaned_data["district_name"],
