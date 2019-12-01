@@ -4,7 +4,7 @@ from .district_service import DistrictService
 import numpy as np
 
 class ElectionService():
-    districtService = DistrictService()
+    district_service = DistrictService()
 
     def get_seat_distribution(self, election_pk):
         """ """
@@ -16,7 +16,7 @@ class ElectionService():
         district_results = []
 
         for d in districts:
-            seat_distribution, special_votes = self.districtService.get_seat_distribution(d, election.get_min_votes_threshold())
+            seat_distribution, special_votes = self.district_service.get_seat_distribution(d, election.get_min_votes_threshold())
 
             district_results.append({"name" : d.name,
                                       "candidatures" : seat_distribution,

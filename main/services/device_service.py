@@ -20,15 +20,17 @@ class DeviceService():
         self.__device = Device.objects.get(id=user_id)
 
     @property
-    def id(self):
-        return self.__device.get_id()
-
-    @property
     def device(self):
         return self.__device
 
+    def get_id(self):
+        return self.__device.get_id()
 
-    def get_device_execution_history(self):
+    def get_default_configuration(self):
+        return self.__device.get_default_min_votes_threshold
+
+
+    def get_execution_history(self):
         try:
             history = Election.objects.get(device=self.__device)
         except:
