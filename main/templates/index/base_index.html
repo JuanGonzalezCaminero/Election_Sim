@@ -2,32 +2,7 @@
 {%load static %}
 
 {%block sidebar %}
-<div id="index_sidebar">
-    <div id="election_history_container">
-        <h1>Historial</h1>
-        {%if history|length == 0 %} 
-            <p>No hay entradas en su historial</p>
-        {% else %}
-            <div id="election_history_list">
-                {% for election in history %}               
-                    <div class="election_card">
-                        <span class="election_card_header">
-                            Elección {{forloop.counter}}
-                        </span>
-                        <div class="election_card_body">
-                            <span class="election_card_date">
-                                <b>Fecha:</b> {{election.date}}
-                            </span>
-                            <span class="election_card_type">
-                                    <b>Tipo:</b> {{election.type}}
-                            </span>
-                        </div>                    
-                    </div>               
-                {% endfor %}
-            </div>
-        {% endif %}
-    </div>
-</div>
+    {% include "index/election_history.html" %}    
 {%endblock sidebar %}
 
 {%block content %}
@@ -39,82 +14,5 @@
     </div>
 
     <h1>Crear nueva elección</h1>
-    <div id="election-builder">
-        <div id="election">
-            <div>
-                <label for="election-date">Fecha de las elecciones</label><input id="election-date" type="date">
-            </div>
-            <div>
-                <label for="election-type">Tipo de elecciones</label>
-                <select id="election-type">
-                    <option value="municipal">Municipal</option>
-                    <option value="ccaa">Autonómica</option>
-                    <option value="senado">Senado</option>
-                    <option value="congreso">Congreso</option>
-                </select>
-            </div>
-            <div>
-                <label for="election-threshold">Umbral mínimo</label><input value="{{ min_votes }}" type="number" id="election-threshold">
-            </div>
-        </div>
-        <hr/>
-        <div id="districts">
-            <button id="new-district">Nueva circunscripción</button>
-            <dialog id="dialog-district">
-                <div>
-                    <label for="district-name">Nombre</label>
-                    <input type="text" id="district-name">
-                </div>
-                <div>
-                    <label for="district-voters">Censo</label>
-                    <input type="number" id="district-voters">
-                </div>
-                <div>
-                    <label for="district-representatives">Escaños</label>
-                    <input type="number" id="district-representatives">
-                </div>
-                <div>
-                    <label for="district-blank">Votos en blanco</label>
-                    <input type="number" id="district-blank">
-                </div>
-                <div>
-                    <label for="district-null">Votos nulos</label>
-                    <input type="number" id="district-null">
-                </div>
-                <button id="cancel">Cancelar</button>
-                <button id="add-district">Añadir</button>
-            </dialog>
-            <div id="district-table">
-                    <table id="district-inside-table"></table>
-            </div>
-        </div>
-        <hr/>
-        <div id="candidatures">
-            <button disabled id="new-candidature">Nueva candidatura</button>
-            <dialog id="dialog-candidature">
-                <div>
-                    <label for="candidature-name">Nombre</label>
-                    <input type="text" id="candidature-name">
-                </div>
-                <div>
-                    <label for="candidature-abbrv">Abreviatura</label>
-                    <input type="text" id="candidature-abbrv">
-                </div>
-                <div>
-                    <label for="candidature-votes">Votos</label>
-                    <input type="text" id="candidature-votes">
-                </div>
-                <button id="cancel-candidature">Cancelar</button>
-                <button id="add-candidature">Añadir</button>
-            </dialog>
-            <div id="candidature-table">
-                    <table id="candidature-inside-table"></table>
-            </div>
-        </div>
-        <hr/>
-        <div>
-            <button>Exportar datos</button>
-            <button>Calcular</button>
-        </div>
-    </div>
+    {% include "index/election_builder.html" %}    
 {%endblock content %}

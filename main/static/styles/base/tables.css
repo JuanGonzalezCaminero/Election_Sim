@@ -1,5 +1,4 @@
-
-.results_table_container {
+.democracy_table_container {
     flex: 1;
     display: flex;
     flex-flow: column;
@@ -10,30 +9,54 @@
     padding: 25px;
 }
 
-.results_table_container table {
+.democracy_table_container table {
     overflow: hidden;
 }
 
-.results_table_container table, 
-.results_table_container  th, 
-.results_table_container  td  {
+.democracy_table_container table, 
+.democracy_table_container  th, 
+.democracy_table_container  td  {
    background-color: white;
    border-collapse: collapse;
    border: 3px solid #0FA3B1;
 }
 
-.results_table_container  th, 
-.results_table_container  td {
+.democracy_table_container  th, 
+.democracy_table_container  td {
     padding: 5px;
     text-align: center;
 }
 
-.results_table_container  th { 
+.democracy_table_container  th { 
     color: rgb(9, 110, 119) ;
     background-color: #B5E2FA ;
 }
 
-.results_table_container  tbody {
+.democracy_table_container  tbody {
     overflow-y: auto;
+}
+
+/* Election data */ 
+.election-data-container {
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    margin: 0 0 10px 0 ;
+}
+
+
+.election-data-container ul {
+    background-color: white;
+    list-style-type: none;
+    border: 3px solid #0FA3B1;
+    margin: 5px 0 0 0;
+    padding: 10px;
+}
+
+.election-data-container li {
+    margin: 0;
+    padding: 5px 10px;
 }
 

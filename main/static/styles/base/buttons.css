@@ -1,16 +1,19 @@
-
 .base_button {
     background-color: rgb(112, 184, 218);
     border: none;
     border-radius: 10px;
     color: white;
-    padding: 15px 20px;
+    padding: 10px 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
+}
+
+.base_button:disabled {
+    cursor: not-allowed;
 }
 
 .base_button.orange {
@@ -22,6 +25,7 @@
 }
 
 .base_button.light_blue {
+    color: #0FA3B1;
     background-color: #B5E2FA ;
 }
 
@@ -51,4 +55,13 @@
 
 .text_button.yellow {
     color: #EDDEA4;
+}
+
+
+.button-centering {
+    display: flex;
+    flex-flow: row;
+    align-content: center;
+    justify-content: space-around;
+    padding: 0 25%;
 }

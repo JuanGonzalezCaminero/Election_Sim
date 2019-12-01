@@ -4,23 +4,32 @@
 <html lang="es">
     <head>
         <!-- CSS stylesheets -->
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/base/base.css'%}?{% now "U" %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/base/buttons.css'%}?{% now "U" %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/base/labels.css'%}?{% now "U" %}b ">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/base/tables.css'%}?{% now "U" %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/base/forms.css'%}?{% now "U" %}">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/base/text.css'%}?{% now "U" %}b ">        
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/base/scrollbars.css'%}?{% now "U" %}b ">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/results/base_results.css'%}?{% now "U" %}b ">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/index/base_index.css'%}?{% now "U" %}b ">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/index/election_builder.css'%}?{% now "U" %}b ">
-        <link rel="stylesheet" type="text/css" href="{% static 'styles/configuration/base_configuration.css'%}?{% now "U" %}b ">
-        <link rel="stylesheet" type="text/css" href="{% static 'dialog/dialog.css'%}?{% now "U" %}">
+            <!-- base -->
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/base/base.css'%}?{% now "U" %}">
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/base/buttons.css'%}?{% now "U" %}">
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/base/labels.css'%}?{% now "U" %}b ">
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/base/tables.css'%}?{% now "U" %}">
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/base/forms.css'%}?{% now "U" %}">
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/base/text.css'%}?{% now "U" %}b ">        
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/base/scrollbars.css'%}?{% now "U" %}b ">
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/base/dialog.css'%}?{% now "U" %}">
+
+            <!-- index -->
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/index/base_index.css'%}?{% now "U" %}b ">
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/index/election_history.css'%}?{% now "U" %}b ">
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/index/election_builder.css'%}?{% now "U" %}b ">
+
+            <!-- results -->
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/results/base_results.css'%}?{% now "U" %}b ">
+
+            <!-- configuration -->
+            <link rel="stylesheet" type="text/css" href="{% static 'styles/configuration/base_configuration.css'%}?{% now "U" %}b ">
+        
 
 
         <!-- JS Scripts -->
-        <script src="{% static 'dialog/dialog.js' %}?{% now 'U' %}"></script>
-        <script src="{% static 'election-builder.js'%}?{% now 'U' %}"></script>
+        <script src="{% static 'scripts/dialog.js' %}?{% now 'U' %}"></script>
+        <script src="{% static 'scripts/election-builder.js'%}?{% now 'U' %}"></script>
         
 
         <title>{% block title %}Democracy{% endblock %}</title>

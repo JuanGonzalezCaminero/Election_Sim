@@ -1,11 +1,11 @@
 
-.myform input[type="number"]  {
+.democracy-form input[type="number"]  {
     border-radius: 5px;
     padding: 2px 5px;
     max-width: 70px;
 }
 
-.myform label {
+.democracy-form label {
 
 }
 

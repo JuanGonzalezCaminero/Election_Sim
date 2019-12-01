@@ -1,15 +1,3 @@
-
-#index_sidebar {
-    min-width: 100px;
-   background: #F9F7F3;
-   flex: 1;
-   display: flex;
-   flex-flow: column;
-   justify-content: flex-start;
-   align-content: center;
-   overflow-y: hidden;
-}
-
 /* Settings */
 #settings_container {
     display: flex;
@@ -31,65 +19,13 @@
         text-decoration: none;
     }
 
-/* Elections history */
-#election_history_container {
-   flex: 1;
-   display: flex;
-   flex-flow: column;
-   justify-content: flex-start;
-   align-content: center;
-   padding: 20px 10px 10px 10px;   
-   overflow: hidden; 
-} 
-
-
-#election_history_list {
-    padding: 0;
+/* Sidebar */
+#index_sidebar {
     flex: 1;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
-    align-content: center;    
-    overflow-y: auto
+    align-content: center;
+    overflow-y: hidden;
+    min-width: 100px;
 }
-
-    /* Election card */
-    .election_card {
-        display: flex;
-        flex-flow: column;
-        border: none;
-        margin: 15px;
-        padding: 0;
-    }
-        .election_card_header {        
-            background: #F7A072 ;
-            text-align: center;
-            color: rgb(2, 84, 92);
-            font-size: 11pt;
-            font-weight: bold;
-            border: 2px solid #F7A072;
-            border-radius: 5px 5px 0 0;
-            margin: 0;
-            padding: 5px 0;
-        }
-
-        .election_card_body {
-            flex: 1;
-            display: flex;
-            flex-flow: column;
-            border: 2px solid #F7A072;
-            border-radius: 0 0 5px 5px;
-        }
-
-            .election_card_date{
-                margin: 0;
-                padding: 5px 10px;
-                font-size: 10pt;
-            
-            }
-
-            .election_card_type {
-                margin: 0;
-                padding: 5px 10px;
-                font-size: 10pt;        
-            }

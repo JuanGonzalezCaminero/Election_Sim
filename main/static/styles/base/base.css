@@ -53,6 +53,7 @@ main {
     display: flex;
     flex-flow: row;
     overflow: hidden;
+    background: #F9F7F3;
 }
 
     /* Main Sidebar */ 
@@ -60,7 +61,6 @@ main {
         display: flex;
         flex-flow: column;
         align-items: center;
-        border-right: 3px solid #0FA3B1;
         overflow: hidden;
     }
 

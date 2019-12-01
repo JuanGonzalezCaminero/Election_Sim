@@ -1,0 +1,91 @@
+<div id="election-builder">
+        <div id="election" class="election-data-container">
+            <ul>            
+                <li>
+                    <label for="election-date">Fecha de las elecciones: </label><input id="election-date" type="date">
+                </li>
+                <li>
+                <label for="election-type">Tipo de elecciones: </label>
+                    <select id="election-type">
+                        <option value="municipal">Municipal</option>
+                        <option value="ccaa">Autonómica</option>
+                        <!--<option value="senado">Senado</option>-->
+                        <option value="congreso">Congreso</option>
+                    </select>
+                </li>
+                <li>
+                    <label for="election-threshold">Umbral mínimo: </label><input value="{{ min_votes }}" type="number" id="election-threshold">
+                </li>
+            </ul>
+        </div>
+        <div id="districts">
+            <div class="button-centering">
+                <button id="new-district" class="base_button light_blue">Nueva circunscripción</button>
+            </div>
+            
+            <dialog id="dialog-district" class="democracy-dialog">
+                <div class="democracy-dialog-content">
+                    <div>
+                        <label for="district-name">Nombre: </label>
+                        <input type="text" id="district-name">
+                    </div>
+                    <div>
+                        <label for="district-voters">Censo: </label>
+                        <input type="number" id="district-voters">
+                    </div>
+                    <div>
+                        <label for="district-representatives">Escaños: </label>
+                        <input type="number" id="district-representatives">
+                    </div>
+                    <div>
+                        <label for="district-blank">Votos en blanco: </label>
+                        <input type="number" id="district-blank">
+                    </div>
+                    <div>
+                        <label for="district-divl">Votos nulos: </label>
+                        <input type="number" id="district-null">
+                    </div>
+                    <div class="button-centering">
+                            <button id="cancel" class="base_button orange" >Cancelar</button>
+                            <button id="add-district" class="base_button dark_blue">Añadir</button>
+                    </div>
+                </div>
+               
+            </dialog>
+            <div  id="district-table" class="democracy_table_container">
+                    <table id="district-inside-table"></table>
+            </div>
+        </div>
+        <div id="candidatures">
+            <div class="button-centering">
+                <button disabled id="new-candidature"  class="base_button light_blue">Nueva candidatura</button>
+            </div>
+            <dialog id="dialog-candidature" class="democracy-dialog">                
+                <div class="democracy-dialog-content">
+                    <div>
+                        <label for="candidature-name">Nombre: </label>
+                        <input type="text" id="candidature-name">
+                    </div>
+                    <div>
+                        <label for="candidature-abbrv">Abreviatura: </label>
+                        <input type="text" id="candidature-abbrv">
+                    </div>
+                    <div>
+                        <label for="candidature-votes">Votos: </label>
+                        <input type="text" id="candidature-votes">
+                    </div>
+                    <div class="button-centering">
+                        <button id="cancel" class="base_button orange" >Cancelar</button>
+                        <button id="add-candidature" class="base_button dark_blue">Añadir</button>
+                    </div>
+                </div>               
+            </dialog>
+            <div id="candidature-table" class="democracy_table_container">
+                    <table id="candidature-inside-table" ></table>
+            </div>
+        </div>
+        <div class="button-centering">
+            <button class="base_button orange">Exportar datos</button>
+            <button class="base_button orange">Calcular</button>
+        </div>
+    </div>

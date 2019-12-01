@@ -17,30 +17,6 @@
     overflow: hidden;
 }
 
-/* Election data */ 
-#election_data_container {
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    margin: 0 0 30px 0 ;
-}
-
-
-#election_data_container ul {
-    background-color: white;
-    list-style-type: none;
-    border: 3px solid #0FA3B1;
-    margin: 5px 0 0 0;
-    padding: 10px;
-}
-
-#election_data_container li {
-    margin: 0;
-    padding: 5px 10px;
-}
-
 
 /* Results */
 #results_container {

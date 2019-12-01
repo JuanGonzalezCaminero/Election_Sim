@@ -1,3 +1,43 @@
+/* Election-builder */   
 #election-builder {
-    margin-left: 25px;
+    flex: 1;
+    display: flex;    
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+    align-content: center;
+    overflow: hidden;
+}
+
+
+#election-builder #election {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 0 20px;
+    overflow-y: auto;
+}
+
+
+#election-builder #districts {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+    overflow-y: auto;
+
+}
+
+
+#election-builder #candidatures {
+    flex: 1;
+    display: flex;
+    flex-flow: column;
+    padding: 20px;
+}
+
+
+#election-builder .button-centering{
+   padding-top: 10px;
+   padding-bottom: 10px;
 }

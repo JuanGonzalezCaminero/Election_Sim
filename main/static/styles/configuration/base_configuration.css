@@ -1,10 +1,8 @@
-
 #configuration_content {
     flex:1;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
-    background: #F9F7F3;
 }
 
 #decorator_container {

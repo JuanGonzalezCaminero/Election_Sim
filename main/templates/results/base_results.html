@@ -6,7 +6,7 @@
             < Inicio
         </a>
     </div>
-    <div id="election_data_container">
+    <div class="election-data-container">
         <h1>Elección</h1>
         <ul>
             <li><b>Fecha: </b>{{results.election.date|date:"d-m-Y"}}</li>
@@ -23,7 +23,7 @@
     <div id="results_container">  
              
         <div id="global_results_container">              
-            <div class="results_table_container">
+            <div class="democracy_table_container">
                 <h2>Distribución de escaños</h2>
                 <table>
                     <thead>
@@ -48,7 +48,7 @@
                     </tbody>                
                 </table>           
             </div>
-            <div class="results_table_container">
+            <div class="democracy_table_container">
                 <h2>Otros votos</h2>
                 <table>
                     <thead>
@@ -80,7 +80,7 @@
             {%for district in results.districts %}
             <div class="district_container">              
                 <h2>{{district.name}}</h2>                
-                <div class="results_table_container"> 
+                <div class="democracy_table_container"> 
                     <h3>Distribución de escaños</h3>                   
                     <table>
                         <thead>
@@ -108,7 +108,7 @@
                     
                 </div>
                 
-                <div class="results_table_container">
+                <div class="democracy_table_container">
                     <h3>Otros votos</h3>                    
                     <table>
                         <tr>
