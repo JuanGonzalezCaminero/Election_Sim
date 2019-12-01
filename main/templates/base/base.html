@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <!-- CSS stylesheets -->
         <link rel="stylesheet" type="text/css" href="{% static 'styles/base/base.css'%}?{% now "U" %}">
@@ -13,11 +13,14 @@
         <link rel="stylesheet" type="text/css" href="{% static 'styles/base/scrollbars.css'%}?{% now "U" %}b ">
         <link rel="stylesheet" type="text/css" href="{% static 'styles/results/base_results.css'%}?{% now "U" %}b ">
         <link rel="stylesheet" type="text/css" href="{% static 'styles/index/base_index.css'%}?{% now "U" %}b ">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles/index/election_builder.css'%}?{% now "U" %}b ">
         <link rel="stylesheet" type="text/css" href="{% static 'styles/configuration/base_configuration.css'%}?{% now "U" %}b ">
+        <link rel="stylesheet" type="text/css" href="{% static 'dialog/dialog.css'%}?{% now "U" %}">
 
 
         <!-- JS Scripts -->
-       
+        <script src="{% static 'dialog/dialog.js' %}?{% now 'U' %}"></script>
+        <script src="{% static 'election-builder.js'%}?{% now 'U' %}"></script>
         
 
         <title>{% block title %}Democracy{% endblock %}</title>
@@ -40,7 +43,7 @@
         </main>  
 
         <footer>
-           <p> Adrian Arroyo - Pablo Valdunciel - Juan González</p> 
+           <p> Adrián Arroyo - Pablo Valdunciel - Juan González</p> 
         </footer>
         
     </body>

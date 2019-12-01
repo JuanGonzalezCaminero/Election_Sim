@@ -13,7 +13,7 @@ class DeviceService():
                 first_access = datetime.date.today(),
                 last_access = datetime.date.today()
             )
-            user_id = device.getId()
+            user_id = device.get_id()
             request.session["user_id"] = user_id
 
         # user_id contains a valid device id

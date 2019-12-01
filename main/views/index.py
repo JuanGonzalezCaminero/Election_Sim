@@ -30,7 +30,7 @@ class IndexView(TemplateView):
         device = DeviceService(request)
         context["device_id"] = device.id
         context["history"] = self.mock_history
-        context["form"] = IndexForm()
+        context["min_votes"] = device.device.get_default_min_votes_threshold()
         return self.render_to_response(context)
 
 
