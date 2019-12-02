@@ -8,6 +8,10 @@ function ival(id){
     return parseInt(val(id));
 }
 
+function fval(id){
+    return parseFloat(val(id));
+}
+
 function updateDistricts(){
     let districtTable = document.getElementById("district-inside-table");
     districtTable.remove();
@@ -150,6 +154,24 @@ function main(){
     let cancelCandidature = document.getElementById("cancel-candidature");
     cancelCandidature.addEventListener("click", ()=>{
        dialogCandidature.close(); 
+    });
+
+    let exportButton = document.getElementById("export");
+    exportButton.addEventListener("click", ()=>{
+        let output = {
+            date: val("election-date").toString(),
+            type: val("election-type"),
+            configuration: {
+                threshold: fval("election-threshold")
+            },
+            districts: districts
+        };
+        let json = JSON.stringify(output);
+        let a = document.createElement("a");
+        let blob = new Blob([json], {type: "application/json"});
+        a.href = window.URL.createObjectURL(blob);
+        a.download = "election.json";
+        a.click();
     });
 }
 
