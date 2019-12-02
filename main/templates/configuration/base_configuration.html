@@ -28,11 +28,17 @@
                             {% endfor %}
                         {% endfor %}
                     {% endif %}
-                    {%if saved %}
+                    {%if saved == "success" %}
                         <div class="success">
                                 <strong>La configuración se ha guardado con éxito.</strong>
                         </div>
                     {%endif %}
+                    {%if saved == "erros" %}
+                        <div class="error">
+                                <strong>Lo sentimos. Hubo un problema al guardar la configuración. Inténtelo de nuevo más tarde.</strong>
+                        </div>
+                    {%endif %}
+
                     <div id="configuration_button_container">
                         <input id="submit_input" type="submit" class="base_button dark_blue" value="Guardar">        
                     </div>      
