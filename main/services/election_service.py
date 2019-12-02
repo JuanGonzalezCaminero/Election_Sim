@@ -18,6 +18,9 @@ class ElectionService():
         for d in districts:
             seat_distribution, special_votes = self.district_service.get_seat_distribution(d, election.get_min_votes_threshold())
 
+            #Order the candidatures by their number of votes
+            seat_distribution.sort(key=lambda a:a["votes"], reverse=True)
+
             district_results.append({"name" : d.name,
                                       "candidatures" : seat_distribution,
                                       "special_votes" : special_votes})
@@ -39,6 +42,9 @@ class ElectionService():
 
             total_special_votes["blank"] += special_votes["blank"]
             total_special_votes["void"] += special_votes["void"]
+        #Order the districts in alphabetical order
+        district_results.sort(key=lambda a:a["name"])
+            
 
         #Compute the total number of votes and assign the percentages
         total_votes = np.sum([totals_count[k]["votes"] for k in totals_count])+total_special_votes["blank"] + total_special_votes["void"]
@@ -57,6 +63,7 @@ class ElectionService():
                         "special_votes": total_special_votes},
             "districts" : district_results    
         }
+        results["global"]["candidatures"].sort(key=lambda a:a["votes"], reverse=True)
 
         return results
 
