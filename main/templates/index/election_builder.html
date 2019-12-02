@@ -86,6 +86,19 @@
         </div>
         <div class="button-centering">
             <button id="export" class="base_button orange">Exportar datos</button>
-            <button class="base_button orange">Calcular</button>
+            <button id="calculate" class="base_button orange">Calcular</button>
+            <button id="load" class="base_button orange">Cargar fichero</button>
+            <dialog id="load-dialog" class="democracy-dialog">
+                <form enctype="multipart/form-data" method="POST" action="/">
+                    {% csrf_token %}
+                    <input type="file" name="file" id="file">
+                    <br>
+                    <div class="button-centering">
+                        <button id="cancel-load" class="base_button orange" >Cancelar</button>
+                        <input class="base_button dark_blue" type="submit" value="Subir fichero">
+                    </div>
+                    
+                </form>
+            </dialog>
         </div>
     </div>
