@@ -1,0 +1,76 @@
+{
+	"date": "1/1/1970",
+	"type": "local",
+	"configuration": {
+		"threshold": 3
+	},
+	"districts": [
+		{
+			"name":"Valladolid",
+			"registered_voters":300000,
+			"representatives":10,
+			"blank":5000,
+			"null":5000,
+			"candidatures":[
+				{
+					"name":"PARTIDO POPULAR",
+					"abbr":"PP",
+					"votes":100000
+				},
+				{
+					"name":"PARTIDO SOCIALISTA OBRERO DE ESPANYA",
+					"abbr":"PSOE",
+					"votes":150000
+				},
+				{
+					"name":"PARTIDO POPULAR SOCIALISTA OBRERO ESTONIO",
+					"abbr":"PPSOE",
+					"votes":40000
+				}
+			]
+		},
+		{
+			"name":"Madrid",
+			"registered_voters":1000000,
+			"representatives":20,
+			"blank":10000,
+			"null":10000,
+			"candidatures":[
+				{
+					"name":"PARTIDO POPULAR",
+					"abbr":"PP",
+					"votes":400000
+				},
+				{
+					"name":"PARTIDO SOCIALISTA OBRERO DE ESPANYA",
+					"abbr":"PSOE",
+					"votes":200000
+				},
+				{
+					"name":"PARTIDO DE MADRIT",
+					"abbr":"PM",
+					"votes":380000
+				}
+			]
+		},
+		{
+			"name":"MURICA",
+			"registered_voters":500000,
+			"representatives":15,
+			"blank":5000,
+			"null":5000,
+			"candidatures":[
+				{
+					"name":"PARTIDO MURICANO REPUBLICANO",
+					"abbr":"PMR",
+					"votes":245000
+				},
+				{
+					"name":"PARTIDO MURICANO DEMOCRATA",
+					"abbr":"PMD",
+					"votes":245000
+				}
+			]
+		}
+	]
+}
