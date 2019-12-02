@@ -20,7 +20,8 @@ class ConfigurationView(TemplateView):
         context = self.get_context_data(*args, **kwargs)
         device_service = DeviceService(request)
         form = ConfigurationForm(request.POST)     
-
+        saved = None 
+        
         try:
             if form.is_valid():    
                 device_service.modify_default_configuration(form['default_min_votes_threshold'].value())
