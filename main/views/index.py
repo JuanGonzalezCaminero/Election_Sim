@@ -6,7 +6,7 @@ from main.services.device_service import DeviceService
 from main.models import Election, ElectionType, District, Candidature
 from main.forms import IndexForm
 
-
+import json
 
 class IndexView(TemplateView):
     
@@ -36,30 +36,6 @@ class IndexView(TemplateView):
     def post(self, request, *args, **kwargs):
         context = self.get_context_data(*args, **kwargs)
         device_service = DeviceService(request)
-        form = IndexForm(request.POST)
-
+        form = IndexForm(request.POST, request.FILES)
         if form.is_valid():
-            election = Election.objects.create(
-                date = form.cleaned_data["date"],
-                type = form.cleaned_data["type"],
-                min_votes_threshold = form.cleaned_data["min_votes_threshold"],
-                device = device_service.device
-            )
-            district = District.objects.create(
-                name = form.cleaned_data["district_name"],
-                registered_voters = form.cleaned_data["registered_voters"],
-                num_representatives = form.cleaned_data["num_representatives"],
-                blank_votes = form.cleaned_data["blank_votes"],
-                void_votes = form.cleaned_data["void_votes"],
-                election = election
-            )
-            candidature = Candidature.objects.create(
-                name = form.cleaned_data["cand_name"],
-                abrv_name = form.cleaned_data["abrv_name"],
-                votes = form.cleaned_data["votes"],
-                district = district
-            )
-            return redirect(f"/election/{election.id}")
-            
-        else:
-            return redirect("/")
+            form.cleaned_data["file"]

@@ -7,10 +7,10 @@
                 <li>
                 <label for="election-type">Tipo de elecciones: </label>
                     <select id="election-type">
-                        <option value="municipal">Municipal</option>
-                        <option value="ccaa">Autonómica</option>
+                        <option value="local">Municipal</option>
+                        <option value="regional">Autonómica</option>
                         <!--<option value="senado">Senado</option>-->
-                        <option value="congreso">Congreso</option>
+                        <option value="congress">Congreso</option>
                     </select>
                 </li>
                 <li>
@@ -75,7 +75,7 @@
                         <input type="text" id="candidature-votes">
                     </div>
                     <div class="button-centering">
-                        <button id="cancel" class="base_button orange" >Cancelar</button>
+                        <button id="cancel-candidature" class="base_button orange" >Cancelar</button>
                         <button id="add-candidature" class="base_button dark_blue">Añadir</button>
                     </div>
                 </div>               
@@ -85,7 +85,20 @@
             </div>
         </div>
         <div class="button-centering">
-            <button class="base_button orange">Exportar datos</button>
-            <button class="base_button orange">Calcular</button>
+            <button id="export" class="base_button orange">Exportar datos</button>
+            <button id="calculate" class="base_button orange">Calcular</button>
+            <button id="load" class="base_button orange">Cargar fichero</button>
+            <dialog id="load-dialog" class="democracy-dialog">
+                <form enctype="multipart/form-data" method="POST" action="/">
+                    {% csrf_token %}
+                    <input type="file" name="file" id="file">
+                    <br>
+                    <div class="button-centering">
+                        <button id="cancel-load" class="base_button orange" >Cancelar</button>
+                        <input class="base_button dark_blue" type="submit" value="Subir fichero">
+                    </div>
+                    
+                </form>
+            </dialog>
         </div>
     </div>

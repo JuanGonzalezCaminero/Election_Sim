@@ -89,12 +89,12 @@
               "properties": {
                 "name": {
                   "type": "string",
-                  "pattern": "^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|-|_){0,69}$",
+                  "pattern": "([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|-|_){0,69}",
                   "maxLength": 70
                 },
                 "abbr": {
                   "type": "string",
-                  "pattern": "^([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|-|_){0,5}$"
+                  "pattern": "([a-z]|[A-Z]){1}([a-z]|[A-Z]|[0-9]|-|_){0,5}"
                 },
                 "votes": {
                   "type": "number",
