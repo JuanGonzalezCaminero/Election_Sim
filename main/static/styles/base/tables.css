@@ -1,5 +1,5 @@
-.democracy_table_container {
-    flex: 1;
+.democracy-table-container {
+    /*flex: 1;*/
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -9,30 +9,30 @@
     padding: 25px;
 }
 
-.democracy_table_container table {
+.democracy-table-container table {
     overflow: hidden;
 }
 
-.democracy_table_container table, 
-.democracy_table_container  th, 
-.democracy_table_container  td  {
+.democracy-table-container table, 
+.democracy-table-container  th, 
+.democracy-table-container  td  {
    background-color: white;
    border-collapse: collapse;
    border: 3px solid #0FA3B1;
 }
 
-.democracy_table_container  th, 
-.democracy_table_container  td {
+.democracy-table-container  th, 
+.democracy-table-container  td {
     padding: 5px;
     text-align: center;
 }
 
-.democracy_table_container  th { 
+.democracy-table-container  th { 
     color: rgb(9, 110, 119) ;
     background-color: #B5E2FA ;
 }
 
-.democracy_table_container  tbody {
+.democracy-table-container  tbody {
     overflow-y: auto;
 }
 

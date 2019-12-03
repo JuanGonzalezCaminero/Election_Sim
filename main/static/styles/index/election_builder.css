@@ -6,7 +6,8 @@
     flex-flow: column;
     justify-content: flex-start;
     align-content: center;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
@@ -15,7 +16,6 @@
     flex-flow: column;
     justify-content: center;
     padding: 0 20px;
-    overflow-y: auto;
 }
 
 
@@ -24,8 +24,6 @@
     display: flex;
     flex-flow: column;
     padding: 20px;
-    overflow-y: auto;
-
 }
 
 
@@ -36,8 +34,11 @@
     padding: 20px;
 }
 
-
 #election-builder .button-centering{
    padding-top: 10px;
    padding-bottom: 10px;
+}
+
+#load-dialog .button-centering {
+    padding: 10px 0;
 }

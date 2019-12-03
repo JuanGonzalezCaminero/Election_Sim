@@ -2,17 +2,26 @@
 {%load static %}
 
 {%block sidebar %}
-    {% include "index/election_history.html" %}    
+    <div id="index-sidebar">
+        {% include "index/election_history.html" %}    
+    </div>    
 {%endblock sidebar %}
 
 {%block content %}
-    <div id="settings_container">       
+<div id="index-content">
+    <div id="index-content-header">       
         <a href="configuration" class="text_button orange"> 
             <img src="{% static 'photos/settings.png' %}"/>
             Configuración 
         </a>
     </div>
-
-    <h1>Crear nueva elección</h1>
-    {% include "index/election_builder.html" %}
+    <div id="index-content-body">
+        <h1>Crear nueva elección</h1>
+        {% include "index/election_builder.html" %}
+    </div>
+    <div id="index-content-footer">
+        
+    </div>    
+</div>
+   
 {%endblock content %}

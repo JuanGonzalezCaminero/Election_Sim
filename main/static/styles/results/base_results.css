@@ -7,25 +7,34 @@
  
  }
 
-#results_content {
+#results-content {
     flex:1;
     display:flex;
     flex-flow: column;
     justify-content: flex-start;
     align-content: center;
-    background: #F9F7F3;
-    overflow: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+
+#results-content-body {
+    flex:1;
+    display:flex;
+    flex-flow: column;
+    justify-content: flex-start;
+   
+}
+
 
 
 /* Results */
-#results_container {
+#results-container {
+    flex: 1;
     display: flex;
     flex-flow: row;
-    overflow: hidden;
 }
 
-#headers_container {
+#headers-container {
     display: flex;
     flex-flow: row;
     background-color: rgba(15, 163, 177, 0.127);
@@ -33,13 +42,13 @@
     align-items: center;
 }
 
-#headers_container h1 {
+#headers-container h1 {
     flex: 1;
     margin: 0px;
 }
 
 /* Global results */
-#global_results_container {
+#global-results-container {
     flex: 1;
     display: flex;
     flex-flow: column;
@@ -47,19 +56,17 @@
     justify-content: flex-start;
     align-content: flex-start;
     align-items: center;
-    overflow-x: hidden;
-    overflow-y: auto;
     margin: 0;
     border-top: 10px solid rgba(15, 163, 177, 0.127);
 }
 
-#global_results_contain h1 {
+#global-results-contain h1 {
     flex: 1;
 }
 
 
 /* District results */
-#district_results_container {
+#district-results-container {
     flex: 1;
     display: flex;
     flex-flow: column;
@@ -67,13 +74,11 @@
     justify-content: flex-start;
     align-content: flex-start;
     align-items: center;
-    overflow-x: hidden;
-    overflow-y: auto;
     margin: 0;
     border-top: 10px solid rgba(15, 163, 177, 0.127);
 }
 
-.district_container {
+.district-container {
     flex: 1;
     display: flex;
     flex-flow: column;

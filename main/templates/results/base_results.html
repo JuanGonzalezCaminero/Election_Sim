@@ -1,87 +1,31 @@
 {% extends "base/base.html" %}
 {%block content %}
-<div id="results_content"> 
+<div id="results-content"> 
     <div class="redirect_index_container">
         <a href="/" class="base_button orange">
             < Inicio
         </a>
     </div>
-    <div class="election-data-container">
-        <h1>Elección</h1>
-        <ul>
-            <li><b>Fecha: </b>{{results.election.date|date:"d-m-Y"}}</li>
-            <li><b>Tipo: </b> {{results.election.type}}</li>            
-        </ul>
-       
-    </div>
-    <div id="headers_container">
-        <h1>Resultados globales</h1> 
-        {% if results.districts|length  > 1 %} 
-        <h1>Resultados por distritos</h1>  
-        {% endif %}   
-    </div>  
-    <div id="results_container">  
-             
-        <div id="global_results_container">              
-            <div class="democracy_table_container">
-                <h2>Distribución de escaños</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Posición</th>
-                            <th>Partido</th>
-                            <th>Escaños</th>
-                            <th>Número de votos</th>
-                            <th>% de votos</th>
-                        </tr>                
-                    </thead>
-                    <tbody>
-                        {%for candidature in results.global.candidatures %}
-                        <tr>
-                            <td>{{forloop.counter}}</td>
-                            <td>{{candidature.abrv_name}} - {{candidature.name}}</td>
-                            <td>{{candidature.seats}}</td>
-                            <td>{{candidature.votes}}</td>
-                            <td>{{candidature.votes_percentage|floatformat:4}}</td>
-                        </tr>                    
-                        {% endfor %}
-                    </tbody>                
-                </table>           
-            </div>
-            <div class="democracy_table_container">
-                <h2>Otros votos</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Número de votos</th>
-                            <th>% de votos</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>En blanco</td>
-                            <td>{{results.global.special_votes.blank}}</td>
-                            <td>{{results.global.special_votes.blank_percentage|floatformat:4}}</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>Nulos</td>
-                            <td>{{results.global.special_votes.void}}</td>
-                            <td>{{results.global.special_votes.void_percentage|floatformat:4}}</td>
-                        </tr>    
-                    </tbody>                            
-                </table>
-            </div>
-        </div>    
-        {% if results.districts|length  > 1 %} 
-        <div id="district_results_container">
-          
-            {%for district in results.districts %}
-            <div class="district_container">              
-                <h2>{{district.name}}</h2>                
-                <div class="democracy_table_container"> 
-                    <h3>Distribución de escaños</h3>                   
+    <div id="results-content-body">
+        <div class="election-data-container">
+            <h1>Elección</h1>
+            <ul>
+                <li><b>Fecha: </b>{{results.election.date|date:"d-m-Y"}}</li>
+                <li><b>Tipo: </b> {{results.election.type}}</li>            
+            </ul>
+        
+        </div>
+        <div id="headers-container">
+            <h1>Resultados globales</h1> 
+            {% if results.districts|length  > 1 %} 
+            <h1>Resultados por distritos</h1>  
+            {% endif %}   
+        </div>  
+        <div id="results-container">  
+                
+            <div id="global-results-container">              
+                <div class="democracy-table-container">
+                    <h2>Distribución de escaños</h2>
                     <table>
                         <thead>
                             <tr>
@@ -93,7 +37,7 @@
                             </tr>                
                         </thead>
                         <tbody>
-                            {%for candidature in district.candidatures %}
+                            {%for candidature in results.global.candidatures %}
                             <tr>
                                 <td>{{forloop.counter}}</td>
                                 <td>{{candidature.abrv_name}} - {{candidature.name}}</td>
@@ -102,38 +46,97 @@
                                 <td>{{candidature.votes_percentage|floatformat:4}}</td>
                             </tr>                    
                             {% endfor %}
-                        </tbody>
-                    
-                    </table>
-                    
+                        </tbody>                
+                    </table>           
                 </div>
-                
-                <div class="democracy_table_container">
-                    <h3>Otros votos</h3>                    
+                <div class="democracy-table-container">
+                    <h2>Otros votos</h2>
                     <table>
-                        <tr>
-                            <th></th>
-                            <th>Número de votos</th>
-                            <th>% de votos</th>
-                        </tr>
-                        
-                        <tr>
-                            <td>En blanco</td>
-                            <td>{{district.special_votes.blank}}</td>
-                            <td>{{district.special_votes.blank_percentage|floatformat:4}}</td>
-                        </tr>
-                        
-                        <tr>
-                            <td>Nulos</td>
-                            <td>{{district.special_votes.void}}</td>
-                            <td>{{district.special_votes.void_percentage|floatformat:4}}</td>
-                        </tr>    
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Número de votos</th>
+                                <th>% de votos</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>En blanco</td>
+                                <td>{{results.global.special_votes.blank}}</td>
+                                <td>{{results.global.special_votes.blank_percentage|floatformat:4}}</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Nulos</td>
+                                <td>{{results.global.special_votes.void}}</td>
+                                <td>{{results.global.special_votes.void_percentage|floatformat:4}}</td>
+                            </tr>    
+                        </tbody>                            
                     </table>
                 </div>
+            </div>    
+            {% if results.districts|length  > 1 %} 
+            <div id="district-results-container">
+            
+                {%for district in results.districts %}
+                <div class="district-container">              
+                    <h2>{{district.name}}</h2>                
+                    <div class="democracy-table-container"> 
+                        <h3>Distribución de escaños</h3>                   
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Posición</th>
+                                    <th>Partido</th>
+                                    <th>Escaños</th>
+                                    <th>Número de votos</th>
+                                    <th>% de votos</th>
+                                </tr>                
+                            </thead>
+                            <tbody>
+                                {%for candidature in district.candidatures %}
+                                <tr>
+                                    <td>{{forloop.counter}}</td>
+                                    <td>{{candidature.abrv_name}} - {{candidature.name}}</td>
+                                    <td>{{candidature.seats}}</td>
+                                    <td>{{candidature.votes}}</td>
+                                    <td>{{candidature.votes_percentage|floatformat:4}}</td>
+                                </tr>                    
+                                {% endfor %}
+                            </tbody>
+                        
+                        </table>
+                        
+                    </div>
+                    
+                    <div class="democracy-table-container">
+                        <h3>Otros votos</h3>                    
+                        <table>
+                            <tr>
+                                <th></th>
+                                <th>Número de votos</th>
+                                <th>% de votos</th>
+                            </tr>
+                            
+                            <tr>
+                                <td>En blanco</td>
+                                <td>{{district.special_votes.blank}}</td>
+                                <td>{{district.special_votes.blank_percentage|floatformat:4}}</td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Nulos</td>
+                                <td>{{district.special_votes.void}}</td>
+                                <td>{{district.special_votes.void_percentage|floatformat:4}}</td>
+                            </tr>    
+                        </table>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
+            {%endif %}
         </div>
-        {%endif %}
     </div>
 </div>
+    
 {%endblock content %}

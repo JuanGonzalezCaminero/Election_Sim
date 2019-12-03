@@ -1,26 +1,43 @@
-/* Settings */
-#settings_container {
+/* Index content */
+#index-content {
+    flex:1;
     display: flex;
-    flex-flow: row;
-    justify-content: flex-end;
+    flex-flow: column;
+    justify-content: flex-start;
     align-content: center;
-    align-items: center;
-    padding: 10px 20px 0 10px;
+    overflow-y: auto;
+    overflow-x:hidden;
 }
-    #settings_container img {
-        width: 20px;
-        height: auto;
-        padding: 0 3px;
-    }
 
-    #settings_container a {
+    /* Settings */
+    #index-content-header {
         display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
         align-content: center;
-        text-decoration: none;
+        align-items: center;
+        padding: 10px 20px 0 10px;
+    }
+        #index-content-header img {
+            width: 20px;
+            height: auto;
+            padding: 0 3px;
+        }
+
+        #index-content-header a {
+            display: flex;
+            align-content: center;
+            text-decoration: none;
+        }
+    
+    #index-content-body {
+        flex: 1;
+        display: flex;
+        flex-flow: column;
     }
 
-/* Sidebar */
-#index_sidebar {
+/* Index Sidebar */
+#index-sidebar {
     flex: 1;
     display: flex;
     flex-flow: column;
@@ -29,3 +46,5 @@
     overflow-y: hidden;
     min-width: 100px;
 }
+
+

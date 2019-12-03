@@ -1,26 +1,24 @@
-<div id="index_sidebar">
-    <div id="election_history_container">
-        <h1>Historial</h1>
-        {%if history|length == 0 %} 
-            <p>No hay entradas en su historial</p>
-        {% else %}
-            <div id="election_history_list">
-                {% for election in history %}               
-                    <div class="election_card">
-                        <span class="election_card_header">
-                            Elección {{forloop.counter}}
+<div id="election_history_container">
+    <h1>Historial</h1>
+    {%if history|length == 0 %} 
+        <p>No hay entradas en su historial</p>
+    {% else %}
+        <div id="election_history_list">
+            {% for election in history %}               
+                <div class="election_card">
+                    <span class="election_card_header">
+                        Elección {{forloop.counter}}
+                    </span>
+                    <div class="election_card_body">
+                        <span class="election_card_date">
+                            <b>Fecha:</b> {{election.date}}
                         </span>
-                        <div class="election_card_body">
-                            <span class="election_card_date">
-                                <b>Fecha:</b> {{election.date}}
-                            </span>
-                            <span class="election_card_type">
-                                    <b>Tipo:</b> {{election.type}}
-                            </span>
-                        </div>                    
-                    </div>               
-                {% endfor %}
-            </div>
-        {% endif %}
-    </div>
+                        <span class="election_card_type">
+                                <b>Tipo:</b> {{election.type}}
+                        </span>
+                    </div>                    
+                </div>               
+            {% endfor %}
+        </div>
+    {% endif %}
 </div>
