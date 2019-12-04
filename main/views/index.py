@@ -3,6 +3,7 @@ from django.views.generic import TemplateView
 from django.http import HttpResponse
 from main.services.district_service import DistrictService
 from main.services.device_service import DeviceService
+from main.services.file_service import FileService
 from main.models import Election, ElectionType, District, Candidature
 from main.forms import IndexForm
 
@@ -38,4 +39,12 @@ class IndexView(TemplateView):
         device_service = DeviceService(request)
         form = IndexForm(request.POST, request.FILES)
         if form.is_valid():
-            form.cleaned_data["file"]
+            file = form.cleaned_data["file"]
+            data = request.FILES["file"].read()
+            data_json = json.loads(data)
+            file_service = FileService()
+            
+            if file_service.is_valid(data_json):
+                device_service.add_election(data_json)
+
+        return self.render_to_response(context)
