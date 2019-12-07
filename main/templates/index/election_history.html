@@ -6,9 +6,9 @@
         <div id="election_history_list">
             {% for election in history %}               
                 <div class="election_card">
-                    <span class="election_card_header">
+                    <a class="election_card_header" href="/results/{{ election.id }}">
                         Elección {{forloop.counter}}
-                    </span>
+                    </a>
                     <div class="election_card_body">
                         <span class="election_card_date">
                             <b>Fecha:</b> {{election.date}}
