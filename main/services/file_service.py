@@ -2,7 +2,6 @@ import json
 from jsonschema import validate
 from main.models import Device
 import os
-from django.conf import settings
 
 class FileService():
 	def is_valid(self, election):
@@ -10,12 +9,6 @@ class FileService():
 		Validates the election object with the json
 		schema for an election
 		'''
-		
-		#url = os.path.join(settings.STATIC_URL, 'election_schema.json')
-
-		#f=open(url, "r")
-		#schema = json.load(f)
-		#f.close()
 
 		schema = {
 			      "$schema": "http://json-schema.org/draft-07/schema#",
@@ -64,7 +57,7 @@ class FileService():
 			            "additionalProperties": False,
 			            "required": [
 			              "name",
-			              "registered_voters",
+			              "voters",
 			              "representatives",
 			              "blank",
 			              "null",
@@ -75,7 +68,7 @@ class FileService():
 			                "type": "string",
 			                "pattern": "^([a-z]|[A-Z]){1,30}$"
 			              },
-			              "registered_voters": {
+			              "voters": {
 			                "type": "number",
 			                "exclusiveMinimum": 0,
 			                "multipleOf": 1.0

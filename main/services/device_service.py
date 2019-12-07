@@ -62,7 +62,7 @@ class DeviceService():
         #Add districts
         for d in election_data["districts"]:
             district = District(name=d["name"],
-                                registered_voters=d["registered_voters"],
+                                registered_voters=d["voters"],
                                 num_representatives=d["representatives"],
                                 blank_votes=d["blank"],
                                 void_votes=d["null"],
@@ -75,3 +75,4 @@ class DeviceService():
                                           votes=c["votes"],
                                           district=district)
                 candidature.save()
+        return election.get_id()

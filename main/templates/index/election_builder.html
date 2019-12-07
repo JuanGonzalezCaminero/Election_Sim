@@ -93,6 +93,7 @@
             <form enctype="multipart/form-data" method="POST" action="/">
                 {% csrf_token %}
                 <input type="file" name="file" id="file">
+                <input type="hidden" name="method" value="form">
                 <br>
                 <div class="button-centering">
                     <button id="cancel-load" class="base_button orange" >Cancelar</button>
