@@ -35,9 +35,9 @@ class DeviceService():
 
     def get_execution_history(self):
         try:
-            history = Election.objects.get(device=self.__device)
+            history = Election.objects.filter(device=self.__device)
         except:
-            pass
+            return []
         
         return history
 

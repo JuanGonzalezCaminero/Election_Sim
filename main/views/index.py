@@ -12,24 +12,13 @@ import json
 class IndexView(TemplateView):
     
     template_name ="index/base_index.html"
-    mock_history = [
-            { 
-                "date": "2019-03-02",
-                "type": "local "
-            },
-
-            { 
-                "date": "2019-03-02",
-                "type": "congress"
-            }
-        ]
 
 
     def get (self, request, *args, **kwargs):
         context = self.get_context_data( *args, **kwargs)
         device_service = DeviceService(request)
         context["device_id"] = device_service.get_id()
-        context["history"] = self.mock_history
+        context["history"] = device_service.get_execution_history()
         context["min_votes"] = device_service.get_default_configuration()
         return self.render_to_response(context)
 
