@@ -200,10 +200,14 @@ function main(){
         let form = new FormData();
         form.append("csrfmiddlewaretoken", token);
         form.append("file",blob);
+        form.append("method", "ajax");
 
         let req = new XMLHttpRequest();
         req.open("POST", "/");
         req.send(form);
+        req.addEventListener("load",()=>{
+            window.location.href = "/results/"+req.response;
+        })
     });
 }
 

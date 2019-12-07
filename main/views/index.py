@@ -45,6 +45,11 @@ class IndexView(TemplateView):
             file_service = FileService()
             
             if file_service.is_valid(data_json):
-                device_service.add_election(data_json)
-
+                election_id = device_service.add_election(data_json)
+                if request.POST["method"] == "ajax":
+                    return HttpResponse(f"{election_id}")
+                else:
+                    return redirect(f"/results/{election_id}/")
         return self.render_to_response(context)
+
+        
