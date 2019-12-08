@@ -6,8 +6,7 @@ from main.services.election_service import ElectionService
 
 class ResultsView(TemplateView):
     template_name = "results/base_results.html"
-    election_service = ElectionService()
-    
+    election_service = ElectionService()    
     
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)

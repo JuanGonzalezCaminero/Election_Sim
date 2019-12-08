@@ -1,11 +1,13 @@
-from main.models.device import Device
-from main.models.election import Election
-from main.models.district import District
-from main.models.candidature import Candidature
-from main.models.election_type import ElectionType
+from main.models import Device, District, ElectionType, Election, Candidature
+from .election_service import ElectionService
+from .district_service import DistrictService
+from .candidature_service import CandidatureService
 import datetime
 
 class DeviceService():
+    __election_service = ElectionService()
+    __district_service = DistrictService()
+    __candidature_service = CandidatureService()
 
     def __init__(self, request):
         try:
@@ -22,6 +24,7 @@ class DeviceService():
         # user_id contains a valid device id
         self.__device = Device.objects.get(id=user_id)
 
+        
     @property
     def device(self):
         return self.__device
@@ -54,25 +57,25 @@ class DeviceService():
         election_type = ElectionType.objects.filter(name=election_data["type"])[0]
         device = Device.objects.get(id=self.get_id())
 
-        election = Election(type=election_type,
-                            date=election_data["date"],
-                            device=device,
-                            min_votes_threshold=election_data["configuration"]["threshold"]/100)
-        election.save()
+        election = self.__election_service.create_election(type=election_type,
+                                                        date=election_data["date"],
+                                                        device=device,
+                                                        min_votes_threshold=election_data["configuration"]["threshold"]/100)
+       
         #Add districts
         for d in election_data["districts"]:
-            district = District(name=d["name"],
-                                registered_voters=d["voters"],
-                                num_representatives=d["representatives"],
-                                blank_votes=d["blank"],
-                                void_votes=d["null"],
-                                election= election)
-            district.save()
+            district = self.__district_service.create_district(name=d["name"],
+                                                            registered_voters=d["voters"],
+                                                            num_representatives=d["representatives"],
+                                                            blank_votes=d["blank"],
+                                                            void_votes=d["null"],
+                                                            election= election)
+            
             #Add candidatures
             for c in d["candidatures"]:
-                candidature = Candidature(abrv_name=c["abbr"],
-                                          name=c["name"],
-                                          votes=c["votes"],
-                                          district=district)
-                candidature.save()
+                self.__candidature_service.create_candidature(abrv_name=c["abbr"],
+                                                                        name=c["name"],
+                                                                        votes=c["votes"],
+                                                                        district=district)
+                
         return election.get_id()

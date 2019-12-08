@@ -4,6 +4,17 @@ import numpy as np
 
 class DistrictService:	
 
+	def create_district(self, name, registered_voters, num_representatives, blank_votes, void_votes, election):
+		district = District(name=name,
+						registered_voters=registered_voters,
+						num_representatives=num_representatives,
+						blank_votes=blank_votes,
+						void_votes=void_votes,
+						election= election)
+		district.save() 
+		return district 
+
+
 	def get_seat_distribution(self, district, min_votes_threshold):
 		""" Obtains the seat distribution of a district applying the D'hont system"""
 		candidatures = []

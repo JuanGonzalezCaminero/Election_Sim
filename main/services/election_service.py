@@ -1,4 +1,4 @@
-from main.models import Election, District, Candidature
+from main.models import Election, District
 from django.shortcuts import get_object_or_404
 from .district_service import DistrictService
 import numpy as np
@@ -6,6 +6,14 @@ import numpy as np
 class ElectionService():
     district_service = DistrictService()
 
+    def create_election(self, type, date, device, min_votes_threshold):
+        election = Election(type=type,
+                            date=date,
+                            device=device,
+                            min_votes_threshold=min_votes_threshold)
+        election.save()
+        return election
+        
     def get_seat_distribution(self, election_pk):
         """ """
         election = get_object_or_404(Election, pk=election_pk)
