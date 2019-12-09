@@ -5,9 +5,6 @@ from .candidature_service import CandidatureService
 import datetime
 
 class DeviceService():
-    __election_service = ElectionService()
-    __district_service = DistrictService()
-    __candidature_service = CandidatureService()
 
     def __init__(self, request):
         try:
@@ -54,14 +51,17 @@ class DeviceService():
 
     def add_election(self, election_data):
         device = self.__device 
-        election = self.__election_service.create_election(type=election_data["type"],
+        election_service = ElectionService()
+        district_service = DistrictService()
+        candidature_service = CandidatureService()
+        election = election_service.create_election(type=election_data["type"],
                                                         date=election_data["date"],
                                                         device=device,
                                                         min_votes_threshold=election_data["configuration"]["threshold"])
        
         #Add districts
         for d in election_data["districts"]:
-            district = self.__district_service.create_district(name=d["name"],
+            district = district_service.create_district(name=d["name"],
                                                             registered_voters=d["voters"],
                                                             num_representatives=d["representatives"],
                                                             blank_votes=d["blank"],
@@ -70,7 +70,7 @@ class DeviceService():
             
             #Add candidatures
             for c in d["candidatures"]:
-                self.__candidature_service.create_candidature(abrv_name=c["abbr"],
+                candidature_service.create_candidature(abrv_name=c["abbr"],
                                                             name=c["name"],
                                                             votes=c["votes"],
                                                             district=district)

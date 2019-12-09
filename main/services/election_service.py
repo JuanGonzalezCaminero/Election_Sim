@@ -4,7 +4,6 @@ from .district_service import DistrictService
 import numpy as np
 
 class ElectionService():
-    __district_service = DistrictService()
 
     def create_election(self, type, date, device, min_votes_threshold):
         election_type = ElectionType.objects.filter(name=type)[0]
@@ -20,6 +19,7 @@ class ElectionService():
         return districts
 
     def get_seat_distribution(self, election_pk):
+        district_service = DistrictService()
         election = get_object_or_404(Election, pk=election_pk)
         districts = self.get_districts(election_pk)
         totals_count = {}
@@ -27,7 +27,7 @@ class ElectionService():
         district_results = []
 
         for d in districts:
-            seat_distribution, special_votes = self.__district_service.get_seat_distribution(d, election.get_min_votes_threshold())
+            seat_distribution, special_votes = district_service.get_seat_distribution(d, election.get_min_votes_threshold())
 
             #Order the candidatures by their number of votes
             seat_distribution.sort(key=lambda a:a["votes"], reverse=True)
