@@ -1,10 +1,8 @@
 from django.shortcuts import render, redirect
 from django.views.generic import TemplateView
 from django.http import HttpResponse
-from main.services.district_service import DistrictService
 from main.services.device_service import DeviceService
 from main.services.file_service import FileService
-from main.models import Election, ElectionType, District, Candidature
 from main.forms import IndexForm
 
 import json
@@ -13,13 +11,13 @@ class IndexView(TemplateView):
     
     template_name ="index/base_index.html"
 
-
     def get (self, request, *args, **kwargs):
         context = self.get_context_data( *args, **kwargs)
         device_service = DeviceService(request)
         context["device_id"] = device_service.get_id()
         context["history"] = device_service.get_execution_history()
         context["min_votes"] = device_service.get_default_configuration()
+
         return self.render_to_response(context)
 
 
@@ -27,6 +25,7 @@ class IndexView(TemplateView):
         context = self.get_context_data(*args, **kwargs)
         device_service = DeviceService(request)
         form = IndexForm(request.POST, request.FILES)
+
         if form.is_valid():
             file = form.cleaned_data["file"]
             data = request.FILES["file"].read()

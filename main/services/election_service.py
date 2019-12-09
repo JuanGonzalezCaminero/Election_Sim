@@ -1,35 +1,38 @@
-from main.models import Election, District
+from main.models import Election, ElectionType, District
 from django.shortcuts import get_object_or_404
 from .district_service import DistrictService
 import numpy as np
 
 class ElectionService():
-    district_service = DistrictService()
+    __district_service = DistrictService()
 
     def create_election(self, type, date, device, min_votes_threshold):
-        election = Election(type=type,
+        election_type = ElectionType.objects.filter(name=type)[0]
+        election = Election(type=election_type,
                             date=date,
                             device=device,
                             min_votes_threshold=min_votes_threshold)
         election.save()
         return election
-        
-    def get_seat_distribution(self, election_pk):
-        """ """
-        election = get_object_or_404(Election, pk=election_pk)
+    
+    def get_districts(self, election_pk):
         districts = District.objects.filter(election=election_pk)
+        return districts
 
+    def get_seat_distribution(self, election_pk):
+        election = get_object_or_404(Election, pk=election_pk)
+        districts = self.get_districts(election_pk)
         totals_count = {}
         total_special_votes = {"blank":0, "void":0, "blank_percentage":0, "void_percentage":0}
         district_results = []
 
         for d in districts:
-            seat_distribution, special_votes = self.district_service.get_seat_distribution(d, election.get_min_votes_threshold())
+            seat_distribution, special_votes = self.__district_service.get_seat_distribution(d, election.get_min_votes_threshold())
 
             #Order the candidatures by their number of votes
             seat_distribution.sort(key=lambda a:a["votes"], reverse=True)
 
-            district_results.append({"name" : d.name,
+            district_results.append({"name" : d.get_name(),
                                       "candidatures" : seat_distribution,
                                       "special_votes" : special_votes})
 
@@ -50,6 +53,7 @@ class ElectionService():
 
             total_special_votes["blank"] += special_votes["blank"]
             total_special_votes["void"] += special_votes["void"]
+
         #Order the districts in alphabetical order
         district_results.sort(key=lambda a:a["name"])
             
@@ -64,8 +68,9 @@ class ElectionService():
 
         results = {
             "election" : {
-                "type": election.type.name,
-                "date": election.date,
+                "type": election.get_type(),
+                "date": election.get_date(),
+                "min_votes_threshold": election.get_min_votes_threshold()
             },
             "global" : {"candidatures": [totals_count[k] for k in totals_count],
                         "special_votes": total_special_votes},

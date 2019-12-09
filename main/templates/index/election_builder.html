@@ -2,10 +2,10 @@
         <div id="election" class="election-data-container">
             <ul>            
                 <li>
-                    <label for="election-date">Fecha de las elecciones: </label><input id="election-date" type="date">
+                    <label for="election-date"><b>Fecha de las elecciones:</b> </label><input id="election-date" type="date">
                 </li>
                 <li>
-                <label for="election-type">Tipo de elecciones: </label>
+                <label for="election-type"><b>Tipo de elecciones:</b> </label>
                     <select id="election-type">
                         <option value="local">Municipal</option>
                         <option value="regional">Autonómica</option>
@@ -14,7 +14,7 @@
                     </select>
                 </li>
                 <li>
-                    <label for="election-threshold">Umbral mínimo: </label><input value="{{ min_votes }}" type="number" id="election-threshold">
+                    <label for="election-threshold"><b>Umbral mínimo de representación:</b> </label><input value="{{ min_votes }}" type="number" id="election-threshold">
                 </li>
             </ul>
         </div>

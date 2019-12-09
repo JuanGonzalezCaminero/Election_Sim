@@ -1,4 +1,4 @@
-from main.models import Device, District, ElectionType, Election, Candidature
+from main.models import Device, Election
 from .election_service import ElectionService
 from .district_service import DistrictService
 from .candidature_service import CandidatureService
@@ -28,13 +28,12 @@ class DeviceService():
     @property
     def device(self):
         return self.__device
-
+        
     def get_id(self):
         return self.__device.get_id()
 
     def get_default_configuration(self):
-        return self.__device.get_default_min_votes_threshold
-
+        return self.__device.get_default_min_votes_threshold()
 
     def get_execution_history(self):
         try:
@@ -47,20 +46,18 @@ class DeviceService():
 
     def modify_default_configuration(self, new_min_votes_threshold):
         try:
-            self.__device.default_min_votes_threshold = new_min_votes_threshold
+            self.__device.set_default_min_votes_threshold(new_min_votes_threshold)
             self.__device.save()
 
         except:
             pass
 
     def add_election(self, election_data):
-        election_type = ElectionType.objects.filter(name=election_data["type"])[0]
-        device = Device.objects.get(id=self.get_id())
-
-        election = self.__election_service.create_election(type=election_type,
+        device = self.__device 
+        election = self.__election_service.create_election(type=election_data["type"],
                                                         date=election_data["date"],
                                                         device=device,
-                                                        min_votes_threshold=election_data["configuration"]["threshold"]/100)
+                                                        min_votes_threshold=election_data["configuration"]["threshold"])
        
         #Add districts
         for d in election_data["districts"]:
@@ -74,8 +71,8 @@ class DeviceService():
             #Add candidatures
             for c in d["candidatures"]:
                 self.__candidature_service.create_candidature(abrv_name=c["abbr"],
-                                                                        name=c["name"],
-                                                                        votes=c["votes"],
-                                                                        district=district)
+                                                            name=c["name"],
+                                                            votes=c["votes"],
+                                                            district=district)
                 
         return election.get_id()

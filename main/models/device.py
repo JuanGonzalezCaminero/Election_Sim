@@ -29,3 +29,7 @@ class Device(models.Model):
 
     def get_default_min_votes_threshold(self):
         return self.default_min_votes_threshold
+
+    def set_default_min_votes_threshold(self, new_default_min_votes_threshold):
+        self.default_min_votes_threshold = new_default_min_votes_threshold 
+        

@@ -11,7 +11,8 @@
             <h1>Elección</h1>
             <ul>
                 <li><b>Fecha: </b>{{results.election.date|date:"d-m-Y"}}</li>
-                <li><b>Tipo: </b> {{results.election.type}}</li>            
+                <li><b>Tipo: </b> {{results.election.type}}</li>  
+                <li><b>Umbral mínimo de representación: </b>{{results.election.min_votes_threshold|floatformat:2}}</li>          
             </ul>
         
         </div>

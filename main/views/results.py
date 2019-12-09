@@ -1,7 +1,6 @@
 from django.views.generic import TemplateView
 from django.shortcuts import render
 from django.http import HttpResponse
-
 from main.services.election_service import ElectionService
 
 class ResultsView(TemplateView):

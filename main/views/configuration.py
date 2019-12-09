@@ -17,7 +17,6 @@ class ConfigurationView(TemplateView):
 
 
     def post(self, request, *args, **kwargs):
-        context = self.get_context_data(*args, **kwargs)
         device_service = DeviceService(request)
         form = ConfigurationForm(request.POST)     
         saved = None 

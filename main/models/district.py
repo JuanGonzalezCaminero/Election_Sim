@@ -34,11 +34,11 @@ class District(models.Model):
     def get_num_representatives(self):
         return self.num_representatives
     
-    def get_blanck_votes(self):
+    def get_blank_votes(self):
         return self.blank_votes
 
-    def vet_void_votes(self):
-        return self.blank_votes
+    def get_void_votes(self):
+        return self.void_votes
     
     def get_election_id(self):
         return self.election 

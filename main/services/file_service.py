@@ -1,9 +1,9 @@
 import json
 from jsonschema import validate
-from main.models import Device
 import os
 
 class FileService():
+
 	def is_valid(self, election):
 		'''
 		Validates the election object with the json

@@ -31,7 +31,7 @@ class Election(models.Model):
         return self.min_votes_threshold
 
     def get_type(self):
-        return self.type.getName() 
+        return self.type.get_name() 
 
     def get_device_id(self):
         return self.device
