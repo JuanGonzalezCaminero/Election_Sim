@@ -1,0 +1,74 @@
+Issue ID,URL,Title,State,Description,Author,Author Username,Assignee,Assignee Username,Confidential,Locked,Due Date,Created At (UTC),Updated At (UTC),Closed At (UTC),Milestone,Weight,Labels,Time Estimate,Time Spent
+1,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/1,Requirements specification document,Closed,"",pabvald,pabvald,"adriarr, pabvald, jugonza","adriarr, pabvald, jugonza",No,No,2019-10-14,2019-10-07 10:08:07,2019-12-16 11:20:14,2019-10-24 17:34:31,Specification and environment,,Sprint 0,32400,23760
+2,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/2,Domain model,Closed,"",pabvald,pabvald,"adriarr, pabvald, jugonza","adriarr, pabvald, jugonza",No,No,2019-10-21,2019-10-11 09:25:19,2019-12-16 11:20:14,2019-10-24 17:33:50,Analysis models,,Sprint 0,18000,1200
+3,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/3,Environment description,Closed,Describe the development environment.,pabvald,pabvald,adriarr,adriarr,No,No,2019-11-04,2019-10-24 17:24:19,2019-12-16 11:20:14,2019-10-27 17:23:29,Specification and environment,,Sprint 1,1800,1800
+4,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/4,Environment preparation,Closed,Prepare the develpment environment,pabvald,pabvald,adriarr,adriarr,No,No,2019-11-04,2019-10-24 17:25:11,2019-12-16 11:20:14,2019-11-02 10:23:11,Specification and environment,,Sprint 1,7200,0
+5,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/5,UC1 - Sequence diagram in analysis,Closed,"",pabvald,pabvald,jugonza,jugonza,No,No,2019-11-04,2019-10-24 17:29:02,2019-12-16 11:20:15,2019-11-02 09:14:49,Analysis models,,Sprint 1,7200,6000
+6,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/6,UC2-A  - Sequence diagram in analysis,Closed,"",pabvald,pabvald,pabvald,pabvald,No,No,2019-11-04,2019-10-24 17:29:57,2019-12-16 11:20:15,2019-11-11 14:24:44,Analysis models,,,7200,21000
+7,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/7,UC3 - Sequence diagram in analysis,Closed,"",pabvald,pabvald,jugonza,jugonza,No,No,2019-11-04,2019-10-24 17:30:59,2019-12-16 11:20:15,2019-11-02 09:46:12,Analysis models,,Sprint 1,3600,3600
+8,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/8,Use Case Diagram,Closed,"",pabvald,pabvald,"","",No,No,2019-11-04,2019-10-24 17:32:10,2019-12-16 11:20:15,2019-11-04 11:06:45,Analysis models,,Sprint 1,7200,5700
+9,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/9,Solve problems in the  requirements specification,Closed,"* [x]  Add correctly formatted names to requirements in order to ease referencing
+* [x]  Change user case descriptions from text to tables 
+* [x]  Add data restrictions 
+* [x]  Add crossed references to Information Requirements 
+* [x]  Add proper Non-functional requirements",pabvald,pabvald,"adriarr, pabvald, jugonza","adriarr, pabvald, jugonza",No,No,2019-11-04,2019-10-24 17:39:51,2019-12-16 11:20:15,2019-11-04 11:02:24,Specification and environment,,Sprint 1,10800,25500
+10,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/10,UC2-B   - Sequence diagram in analysis,Closed,"",pabvald,pabvald,jugonza,jugonza,No,No,,2019-10-31 10:27:04,2019-12-16 11:20:15,2019-11-11 14:41:07,Analysis models,,Sprint 1,0,13200
+11,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/11,UC2-C   - Sequence diagram in analysis,Closed,"",pabvald,pabvald,pabvald,pabvald,No,No,,2019-10-31 10:28:07,2019-12-16 11:20:15,2019-11-11 14:40:58,Analysis models,,Sprint 1,7200,11100
+12,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/12,UC1 - Sequence diagram in design,Closed,"",pabvald,pabvald,jugonza,jugonza,No,No,2019-11-25,2019-11-04 11:07:35,2019-12-16 11:20:16,2019-12-13 20:25:11,Design model,,Sprint 5,0,7200
+13,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/13,Class diagram,Closed,"",pabvald,pabvald,pabvald,pabvald,No,No,2019-11-18,2019-11-04 11:08:45,2019-12-16 11:20:16,2019-11-11 15:28:24,Design model,,Sprint 2,0,0
+14,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/14,Django Database,Closed,Code the Django database in SQlite according to the data model,adriarr,adriarr,adriarr,adriarr,No,No,2019-11-18,2019-11-09 16:19:08,2019-12-16 11:20:16,2019-11-11 21:03:08,Design model,,Sprint 2,0,3600
+15,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/15,Data Model,Closed,,pabvald,pabvald,adriarr,adriarr,No,No,2019-12-02,2019-11-11 15:16:28,2019-12-16 11:20:16,2019-11-11 21:02:46,Design model,,Sprint 2,0,1800
+16,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/16,Uses Style view,Closed,"",pabvald,pabvald,adriarr,adriarr,No,No,,2019-11-18 10:19:52,2019-12-16 11:20:16,2019-11-25 13:59:15,Design model,,,3600,0
+17,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/17,Get started with DJANGO,Closed,"",pabvald,pabvald,"pabvald, jugonza","pabvald, jugonza",No,No,2019-11-21,2019-11-18 10:26:29,2019-12-16 11:20:16,2019-11-23 15:30:40,,,"Priority,Sprint 3",21600,23400
+18,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/18,Module General Style view,Closed,"",pabvald,pabvald,pabvald,pabvald,No,No,,2019-11-19 08:10:02,2019-12-16 11:20:17,2019-12-02 13:48:47,Design model,,Sprint 4,3600,7200
+19,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/19,Device  service,Closed,"* [ ] Device identfication/ cookies 
+* [ ] Election history",pabvald,pabvald,adriarr,adriarr,No,No,2019-11-20,2019-11-19 08:10:15,2019-12-16 11:20:17,2019-11-26 20:22:36,,,"Priority,Sprint 4",4500,7200
+20,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/20,District service,Closed,"The service must include:
+
+* [x] Seat distribution  calculation  ",pabvald,pabvald,jugonza,jugonza,No,No,2019-11-20,2019-11-19 08:11:08,2019-12-16 11:20:17,2019-11-27 11:24:08,,,Priority,9000,28800
+21,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/21,Election service,Closed,* [x] Seat distribution calculation,pabvald,pabvald,jugonza,jugonza,No,No,,2019-11-19 08:47:38,2019-12-16 11:20:17,2019-12-02 11:24:12,,,"Priority,Sprint 3,Sprint 4",0,3600
+22,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/22,Candidature service,Closed,,pabvald,pabvald,"","",No,No,,2019-11-19 08:47:46,2019-12-16 11:20:18,2019-11-25 13:59:10,,,Sprint 3,0,0
+23,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/23,Index view,Open,"* [x]  Elections history list in sidebar
+* [x]  New election form 
+* [ ]  Load election history record dynamic behaviour
+* [x]  Load file button",pabvald,pabvald,adriarr,adriarr,No,No,,2019-11-19 20:50:01,2019-12-16 11:20:18,,,,Sprint 5,0,21600
+24,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/24,Results view,Closed,,pabvald,pabvald,pabvald,pabvald,No,No,2019-11-23,2019-11-19 20:50:07,2019-12-16 11:20:18,2019-11-21 19:29:57,,,Sprint 3,14400,11700
+25,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/25,UC2 - Sequence diagram in design,Open,"* [x]  UC2-A Set election data by GUI 
+* [x]  UC2-B Set election data by selecting a history record 
+* [ ]  UC2-C Set election data by uploading a file ",pabvald,pabvald,"adriarr, jugonza","adriarr, jugonza",No,No,,2019-11-19 20:51:01,2019-12-16 11:20:18,,,,Sprint 5,0,10800
+26,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/26,Uses General Style View,Closed,"",pabvald,pabvald,"adriarr, jugonza","adriarr, jugonza",No,No,,2019-11-23 15:31:21,2019-12-16 11:20:18,2019-12-13 22:51:12,Design model,,Sprint 5,3600,1800
+27,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/27,Load File Service,Closed,,pabvald,pabvald,jugonza,jugonza,No,No,,2019-11-23 20:04:48,2019-12-16 11:20:18,2019-12-07 16:30:22,,,Sprint 4,0,21600
+28,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/28,CSS Style improvement,Closed,,pabvald,pabvald,pabvald,pabvald,No,No,,2019-11-24 17:47:18,2019-12-16 11:20:19,2019-11-25 11:50:56,,,Sprint 4,0,14400
+29,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/29,UC3 - Squence diagram in design,Closed,,pabvald,pabvald,pabvald,pabvald,No,No,,2019-11-27 09:56:19,2019-12-16 11:20:19,2019-12-11 17:35:13,,,"Sprint 4,Sprint 5",10800,16200
+30,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/30,Model analisis document,Closed,,pabvald,pabvald,"pabvald, jugonza","pabvald, jugonza",No,No,2019-12-02,2019-11-27 10:15:43,2019-12-16 11:20:19,2019-12-02 13:49:11,Analysis models,,Sprint 4,7200,3600
+31,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/31,Configuration view,Closed,"* [x]  HTML 
+* [x]  CSS ",pabvald,pabvald,pabvald,pabvald,No,No,2019-11-28,2019-11-27 11:20:57,2019-12-16 11:20:19,2019-11-28 13:04:15,Design model,,Sprint 4,10800,14220
+32,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/32,Generalization style,Closed,,pabvald,pabvald,pabvald,pabvald,No,No,,2019-12-08 19:27:46,2019-12-16 11:20:19,2019-12-08 19:28:11,Design model,,Sprint 4,3600,3600
+33,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/33,Design Models document,Closed,,pabvald,pabvald,"adriarr, pabvald, jugonza","adriarr, pabvald, jugonza",No,No,,2019-12-09 09:17:40,2019-12-16 11:20:19,2019-12-13 22:50:41,Design model,,Sprint 5,9000,6900
+34,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/34,TemplateView rendering diagram,Closed,,pabvald,pabvald,pabvald,pabvald,No,No,,2019-12-11 17:33:47,2019-12-16 11:20:19,2019-12-11 17:34:44,Design model,,Sprint 5,3600,3600
+35,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/35,Request handling diagram,Closed,,pabvald,pabvald,pabvald,pabvald,No,No,,2019-12-11 17:34:01,2019-12-16 11:20:20,2019-12-11 17:34:28,Design model,,Sprint 5,3600,3600
+36,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/36,Plan driven document,Open,"Documento en Overleaf: https://es.overleaf.com/3149343827gtwmcmhmtsfc
+* [ ]  Introducción 
+
+<hr>
+
+* [x]  Requisitos del sistema 
+
+<hr>
+
+* [x]  Descripción de la arquitectura del sistema
+* [ ]  Estructura de descomposición del proyecto (PBS)
+* [ ]  Estructura de descomposición de tareas (WBD
+
+<hr>
+
+* [ ]  Plan de tareas - Tabla de recursos con los tipos de trabajo requeridos 
+* [ ]  Plan de tareas  - Diagrama de actividades
+* [ ]  Plan de tareas  - Diagrama de Gantt con fechas reales. Calcular camino crítico.
+
+<hr>
+
+* [ ]   Esfuerzo del proyecto - Calcular los puntos de función de los componentes de alto nivel construidos.
+* [ ]   Esfuerzo del proyecto  - Contabilizar en tablas el esfuerzo realizado para los componentes (poniendo cuidado en el rol asignado a cada actividad). 
+* [ ]   Esfuerzo del proyecto  - Tabular esfuerzo realizado. Traducción Puntos de función en horas-persona.",pabvald,pabvald,"adriarr, pabvald, jugonza","adriarr, pabvald, jugonza",No,No,,2019-12-13 22:51:33,2019-12-16 11:20:20,,Project planning,,Sprint 5,0,5400
+37,https://gitlab.inf.uva.es/pabvald/pydsc-19-29-02/issues/37,Input validation,Open,,pabvald,pabvald,"adriarr, jugonza","adriarr, jugonza",No,No,,2019-12-13 22:51:52,2019-12-16 11:20:20,,Project planning,,Sprint 5,0,0
