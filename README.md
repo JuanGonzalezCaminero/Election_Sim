@@ -17,8 +17,8 @@ Democrazy: Ficheros de configuración de Django y conexión con el servidor wsgi
 
 Docs: Diferentes documentos entregados a lo largo del transcurso de la asignatura.
 
-Main: Código de la aplicación.
-
+Main: Código de la aplicación.  
+|  
 |- Models: Clases usadas por Django para la interacción con la base de datos.  
 |  
 |- Services: Módulos usados por las vistas.  
