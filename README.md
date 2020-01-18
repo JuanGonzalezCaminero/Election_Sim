@@ -22,9 +22,8 @@ Main: Código de la aplicación.
 |- Services: Módulos usados por las vistas.
 |- Views: Vistas de Django
 |- Templates: Plantillas HTML
-|- Static: Imágenes, CSS y JavaScript
-
-Project_plan: Archivos relacionados con la entrega del plan de proyecto.
+|- Static: Imágenes, CSS y JavaScript, ficheros de prueba con elecciones, schema
+           para la validación de elecciones.
 
 Schema: Fichero json usado para validar los ficheros de entrada.
 
