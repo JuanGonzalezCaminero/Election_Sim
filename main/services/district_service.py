@@ -25,12 +25,18 @@ class DistrictService:
 		candidatures_query = self.get_candidatures(district.get_id())
 		total_votes = np.sum([a.get_votes() for a in candidatures_query]) + district.get_blank_votes() + district.get_void_votes()
 
+		valid_candidatures = []
+
+		for c in candidatures_query:
+			if c.get_votes()>=(total_votes*min_votes_threshold):
+				valid_candidatures.append(c)
+
 		# Seat calculation by  D'Hondt System
 		assigned_seats = {candidature:0 for candidature in candidatures_query}
 
 		for seat in range(0, district.get_num_representatives()):
-			quotients = [candidature.get_votes()/(assigned_seats[candidature]+1) for candidature in candidatures_query]
-			assigned_seats[list(candidatures_query)[np.argmax(quotients)]] += 1
+			quotients = [candidature.get_votes()/(assigned_seats[candidature]+1) for candidature in valid_candidatures]
+			assigned_seats[list(valid_candidatures)[np.argmax(quotients)]] += 1
 
 		
 		for c in candidatures_query:
