@@ -30,6 +30,4 @@ Main: Código de la aplicación.
 |- Static: Imágenes, CSS y JavaScript, ficheros de prueba con elecciones, schema  
            para la validación de elecciones.
 
-Schema: Fichero json usado para validar los ficheros de entrada.
-
 Uml-models: Ficheros .asta
